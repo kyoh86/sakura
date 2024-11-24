@@ -63,45 +63,6 @@ let g:sakura_palette['grayscale3'] =   [g:sakura_colors.grayscale3,   237]
 let g:sakura_palette['grayscale4'] =   [g:sakura_colors.grayscale4,   238]
 let g:sakura_palette['grayscale5'] =   [g:sakura_colors.grayscale5,   239]
 
-" Set a highlight group.
-" `params` contains some options like below.
-"   - fg     color
-"   - bg     color
-"   - empha  list of bold|italic|inverseg|underline|undercurlg
-"   - guisp  a color for various underlines
-"
-" Which color for fg or bg you can get it from g:sakura_palette e.g.:
-"   call SakuraHighlight(Pmenu, {'fg': g:sakura_palette.red})
-function! SakuraHighlight(group, params)
-  " params: fg, bg, empha, guisp
-  let l:histr = [ 'highlight', a:group ]
-
-  let l:fg = get(a:params, 'fg', get(a:params, 'foreground', []))
-  if len(l:fg) >= 2
-    call extend(l:histr, ['guifg=' . l:fg[0], 'ctermfg=' . l:fg[1]])
-  endif
-
-  let l:bg = get(a:params, 'bg', get(a:params, 'background', []))
-  if len(l:bg) >= 2
-    call extend(l:histr, ['guibg=' . l:bg[0], 'ctermbg=' . l:bg[1]])
-  endif
-
-  let l:empha = get(a:params, 'empha', [])
-  let l:empha = filter(l:empha, {_, v -> v !=# ''})
-
-  if len(l:empha) > 0
-    let l:em = join(l:empha, ',')
-    call extend(l:histr, ['gui=' . l:em, 'cterm=' . l:em])
-  endif
-
-  let l:guisp = get(a:params, 'guisp', [])
-  if len(l:guisp) > 0
-    call add(l:histr, 'guisp=' . l:guisp[0])
-  endif
-
-  execute join(l:histr, ' ')
-endfunction
-
 " Sakura Hi Groups:
 " memoize common hi groups
 highlight SakuraWhite guifg=#3a2731 ctermfg=0
@@ -162,6 +123,8 @@ highlight ColorColumn guibg=#5d3e4c ctermbg=8
 
 " Concealed element: \lambda → λ
 highlight Conceal guifg=#196a9e ctermfg=4
+
+highlight! link Delimiter SakuraBlack
 
 highlight! link NonText SakuraBrightBlack
 highlight! link SpecialKey SakuraBrightBlack
