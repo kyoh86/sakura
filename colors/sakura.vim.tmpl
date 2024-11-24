@@ -9,7 +9,7 @@ if exists("syntax_on")
 endif
 
 let g:colors_name='sakura'
-set background=bright
+set background=light
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -32,7 +32,6 @@ let g:sakura_colors['brightblue'] =    '#{{.BrightBlue.ToHex}}'
 let g:sakura_colors['brightmagenta'] = '#{{.BrightMagenta.ToHex}}'
 let g:sakura_colors['brightcyan'] =    '#{{.BrightCyan.ToHex}}'
 let g:sakura_colors['brightwhite'] =   '#{{.BrightWhite.ToHex}}'
-let g:sakura_colors['hardblack'] =     '#{{.HardBlack.ToHex}}'
 let g:sakura_colors['gradation1'] =    '#{{.Gradation1.ToHex}}'
 let g:sakura_colors['gradation2'] =    '#{{.Gradation2.ToHex}}'
 let g:sakura_colors['gradation3'] =    '#{{.Gradation3.ToHex}}'
@@ -56,7 +55,6 @@ let g:sakura_palette['brightblue'] =    [g:sakura_colors.brightblue,    {{.Brigh
 let g:sakura_palette['brightmagenta'] = [g:sakura_colors.brightmagenta, {{.BrightMagenta.Index}}]
 let g:sakura_palette['brightcyan'] =    [g:sakura_colors.brightcyan,    {{.BrightCyan.Index}}]
 let g:sakura_palette['brightwhite'] =   [g:sakura_colors.brightwhite,   {{.BrightWhite.Index}}]
-let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    {{.HardBlack.Index}}]
 let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   {{.Gradation1.Index}}]
 let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   {{.Gradation2.Index}}]
 let g:sakura_palette['gradation3'] =   [g:sakura_colors.gradation3,   {{.Gradation3.Index}}]
@@ -65,7 +63,7 @@ let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   {{.Gradati
 
 " Sakura Hi Groups:
 " memoize common hi groups
-highlight SakuraWhite {{Foreground .Black}}
+highlight SakuraWhite {{Foreground .White}}
 highlight SakuraRed {{Foreground .Red}}
 highlight SakuraGreen {{Foreground .Green}}
 highlight SakuraYellow {{Foreground .Yellow}}
@@ -99,19 +97,19 @@ highlight SakuraGradation5 {{Foreground .Gradation5}}
 
 " General UI:
 " Normal text
-highlight Normal {{Foreground .Black}} {{Background .BrightWhite}}
-highlight NormalFloat {{Foreground .Black}} {{Background .Gradation1}}
+highlight Normal {{Foreground .Foreground}} {{Background .Background}}
+highlight NormalFloat {{Foreground .Foreground}} {{Background .Gradation1}}
 
 " Screen line that the cursor is
 highlight! CursorLine NONE
 highlight CursorLine {{Background .Gradation1}}
 " Screen column that the cursor is
-highlight CursorColumn {{Background .Gradation3}}
+highlight CursorColumn {{Background .Gradation2}}
 
 " Tab pages line filler
-highlight TabLineFill {{Foreground .Green}} {{Background .BrightWhite}}
+highlight TabLineFill {{Foreground .Green}} {{Background .Background}}
 " Active tab page label
-highlight TabLineSel {{Foreground .Red}} {{Background .BrightWhite}} {{Emphasis "bold"}}
+highlight TabLineSel {{Foreground .Red}} {{Background .Background}} {{Emphasis "bold"}}
 " Not active tab page label
 highlight! link TabLine TabLineFill
 
@@ -119,77 +117,77 @@ highlight! link TabLine TabLineFill
 highlight MatchParen {{Foreground .Yellow}} {{Background .BrightRed}} {{Emphasis "bold"}}
 
 " Highlighted screen columns
-highlight ColorColumn {{Background .BrightBlack}}
+highlight ColorColumn {{Background .Gradation2}}
 
 " Concealed element: \lambda → λ
 highlight Conceal {{Foreground .Blue}}
 
-highlight! link Delimiter SakuraBlack
+highlight! Delimiter {{Foreground .Foreground}}
 
-highlight! link NonText SakuraBrightBlack
-highlight! link SpecialKey SakuraBrightBlack
-highlight! link Whitespace SakuraBrightBlack
+highlight! NonText {{Foreground .Gradation2}}
+highlight! SpecialKey {{Foreground .Gradation2}}
+highlight! Whitespace {{Foreground .Gradation2}}
 
-highlight Visual {{Foreground .Black}} {{Background .Yellow}}
+highlight Visual {{Foreground .Background}} {{Background .Yellow}}
 highlight! link VisualNOS Visual
 
-highlight Search {{Foreground .Black}} {{Background .BrightBlue}}
+highlight Search {{Foreground .Background}} {{Background .BrightBlue}}
 highlight IncSearch None
-highlight IncSearch {{Foreground .Black}} {{Background .BrightMagenta}}
+highlight IncSearch {{Foreground .Background}} {{Background .BrightMagenta}}
 highlight CurSearch None
-highlight CurSearch {{Foreground .Black}} {{Background .BrightGreen}}
+highlight CurSearch {{Foreground .Background}} {{Background .BrightGreen}}
 highlight Substitute None
-highlight Substitute {{Foreground .Black}} {{Background .BrightMagenta}}
+highlight Substitute {{Foreground .Background}} {{Background .BrightMagenta}}
 
 highlight Underlined {{Foreground .Blue}} {{Emphasis "underline"}}
 
-highlight StatusLine {{Foreground .White}} {{Background .Gradation4}} {{Emphasis "bold"}}
-highlight StatusLineNC {{Foreground .White}} {{Background .Black}} {{Emphasis "underline"}}
+highlight StatusLine {{Foreground .Foreground}} {{Background .Gradation2}} {{Emphasis "bold"}}
+highlight StatusLineNC {{Foreground .Foreground}} {{Background .Gradation1}} {{Emphasis "underline"}}
 
 " The column separating vertically split windows
-highlight VertSplit {{Foreground .Gradation2}} {{Emphasis "bold"}}
+highlight VertSplit {{Foreground .Gradation4}} {{Emphasis "bold"}}
 
 " Current match in wildmenu completion
-highlight WildMenu {{Foreground .Blue}} {{Background .BrightWhite}} {{Emphasis "bold"}}
+highlight WildMenu {{Foreground .Blue}} {{Background .Background}} {{Emphasis "bold"}}
 
 " Directory names, special names in listing
-highlight! link Directory SakuraGreenBold
+highlight! Directory {{Foreground .Green}} {{Emphasis "bold"}}
 
 " Titles for output from :set all, :autocmd, etc.
-highlight! link Title SakuraYellowBold
+highlight! Title {{Foreground .Yellow}} {{Emphasis "bold"}}
 
 " Error messages on the command line
-highlight ErrorMsg {{Foreground .BrightWhite}} {{Background .Red}}
+highlight ErrorMsg {{Foreground .Foreground}} {{Background .Red}}
 " More prompt: -- More --
-highlight! link MoreMsg SakuraYellowBold
+highlight! MoreMsg {{Foreground .Yellow}} {{Emphasis "bold"}}
 " Current mode message: -- INSERT --
-highlight! link ModeMsg SakuraYellowBold
+highlight! ModeMsg {{Foreground .Yellow}} {{Emphasis "bold"}}
 " 'Press enter' prompt and yes/no questions
-highlight! link Question SakuraBrightRedBold
+highlight! Question {{Foreground .BrightRed}} {{Emphasis "bold"}}
 " Warning messages
-highlight! link WarningMsg SakuraRedBold
+highlight! WarningMsg {{Foreground .Red}} {{Emphasis "bold"}}
 " Gutter:
 " Line number for :number and :# commands
-highlight LineNr {{Foreground .Black}} {{Background .BrightWhite}}
+highlight LineNr {{Foreground .Gradation4}} {{Background .Gradation1}}
 
 " Line number of CursorLine
-highlight CursorLineNr {{Foreground .BrightWhite}} {{Background .Blue}} {{Emphasis "bold"}}
+highlight CursorLineNr {{Foreground .Background}} {{Background .Blue}} {{Emphasis "bold"}}
 
 if hlexists('LineNrAbove')
-  highlight LineNrAbove {{Foreground .Magenta}} {{Background .BrightWhite}}
-  highlight LineNrBelow {{Foreground .Green}} {{Background .BrightWhite}}
+  highlight LineNrAbove {{Foreground .StrongMagenta}} {{Background .Gradation1}}
+  highlight LineNrBelow {{Foreground .StrongGreen}} {{Background .Gradation1}}
 endif
 
 " Column where signs are displayed
-highlight SignColumn {{Background .BrightWhite}}
+highlight SignColumn {{Background .Gradation1}}
 
 " Line used for closed folds
-highlight Folded {{Foreground .BrightBlack}} {{Background .BrightWhite}} {{Emphasis "italic"}}
+highlight Folded {{Foreground .Gradation4}} {{Emphasis "italic"}}
 " Column where folds are displayed
-highlight FoldColumn {{Foreground .BrightBlack}} {{Background .BrightWhite}}
+highlight FoldColumn {{Foreground .Gradation4}} {{Background .Background}}
 " Cursor:
 " Character under cursor
-highlight Cursor {{Foreground .Black}} {{Background .Yellow}}
+highlight Cursor {{Foreground .Background}} {{Background .StrongYellow}}
 " Character under cursor in a focused terminal
 highlight link TermCursor Cursor
 " Cursor in an unfocused terminal
@@ -201,65 +199,65 @@ highlight! link iCursor Cursor
 " Language mapping cursor
 highlight! link lCursor Cursor
 " Syntax Highlighting:
-highlight! Special {{Foreground .Yellow}} {{Emphasis "bold"}}
+highlight! Special {{Foreground .StrongYellow}} {{Emphasis "bold"}}
 
-highlight Comment {{Foreground .Gradation2}} {{Emphasis "italic"}}
-highlight Todo {{Foreground .Black}} {{Background .BrightWhite}} {{Emphasis "bold" "italic"}}
-highlight Error {{Foreground .Red}} {{Background .BrightWhite}} {{Emphasis "bold" "inverse"}}
+highlight Comment {{Foreground .Gradation3}} {{Emphasis "italic"}}
+highlight Todo {{Foreground .Foreground}} {{Emphasis "bold" "italic"}}
+highlight Error {{Foreground .StrongRed}} {{Emphasis "bold" "inverse"}}
 
 " String constant: "this is a string"
 highlight String {{Foreground .Green}}
 
 " Generic statement
-highlight! link Statement SakuraYellow
+highlight! Statement {{Foreground .Yellow}}
 " if, then, else, endif, swicth, etc.
-highlight! link Conditional SakuraYellow
+highlight! Conditional {{Foreground .Yellow}}
 " for, do, while, etc.
-highlight! link Repeat SakuraYellow
+highlight! Repeat {{Foreground .Yellow}}
 " case, default, etc.
-highlight! link Label SakuraYellow
+highlight! Label {{Foreground .Yellow}}
 " try, catch, throw
-highlight! link Exception SakuraRed
+highlight! Exception {{Foreground .Red}}
 " sizeof, "+", "*", etc.
 highlight! link Operator None
 " Any other keyword
-highlight! link Keyword SakuraRed
+highlight! Keyword {{Foreground .Red}}
 
 " Variable name
-highlight! Identifier {{Foreground .Blue}}
+highlight! Identifier {{Foreground .StrongBlue}}
 " Function name
-highlight! link Function SakuraBlue
+highlight! Function {{Foreground .Blue}}
 
 " Generic preprocessor
-highlight! link PreProc SakuraMagenta
+highlight! PreProc {{Foreground .Magenta}}
 " Preprocessor #include
-highlight! link Include SakuraMagenta
+highlight! Include {{Foreground .Magenta}}
 " Preprocessor #define
-highlight! link Define SakuraMagenta
+highlight! Define {{Foreground .Magenta}}
 " Same as Define
-highlight! link Macro SakuraMagenta
+highlight! Macro {{Foreground .Magenta}}
 " Preprocessor #if, #else, #endif, etc.
-highlight! link PreCondit SakuraMagenta
+highlight! PreCondit {{Foreground .Magenta}}
 
 " Generic constant
-highlight! link Constant SakuraMagenta
+highlight! Constant {{Foreground .StrongMagenta}}
 " Character constant: 'c', '/n'
-highlight! link Character SakuraMagenta
+highlight! Character {{Foreground .StrongMagenta}}
 " Boolean constant: TRUE, false
-highlight! link Boolean SakuraMagenta
+highlight! Boolean {{Foreground .StrongMagenta}}
 " Number constant: 234, 0xff
-highlight! link Number SakuraMagenta
+highlight! Number {{Foreground .StrongMagenta}}
 " Floating point constant: 2.3e10
-highlight! link Float SakuraMagenta
+highlight! Float {{Foreground .StrongMagenta}}
 
 " Generic type
-highlight! link Type SakuraCyan
+highlight! Type {{Foreground .Cyan}}
 " static, register, volatile, etc
-highlight! link StorageClass SakuraCyan
+highlight! StorageClass {{Foreground .Cyan}}
 " struct, union, enum, etc.
-highlight! link Structure SakuraRed
+highlight! Structure {{Foreground .StrongRed}}
 " typedef
-highlight! link Typedef SakuraRed
+highlight! Typedef {{Foreground .StrongRed}}
 " Completion Menu:
 " Popup menu: normal item
 highlight Pmenu {{Background .Gradation1}}
@@ -272,10 +270,10 @@ highlight PmenuThumb {{Background .Gradation2}}
 " Quickfix
 highlight QuickFixLine {{Foreground .Cyan}} {{Emphasis "bold"}}
 " Diffs:
-highlight DiffDelete {{Foreground .Red}} {{Background .BrightWhite}}
-highlight DiffAdd {{Foreground .Green}} {{Background .BrightWhite}}
-highlight DiffChange {{Foreground .Cyan}} {{Background .BrightWhite}}
-highlight DiffText {{Foreground .Yellow}} {{Background .BrightWhite}}
+highlight DiffDelete {{Foreground .StrongRed}} {{Background .Background}}
+highlight DiffAdd {{Foreground .StrongGreen}} {{Background .Background}}
+highlight DiffChange {{Foreground .Cyan}} {{Background .Background}}
+highlight DiffText {{Foreground .StrongYellow}} {{Background .Background}}
 highlight! link Added DiffAdd
 highlight! link Changed DiffChange
 highlight! link Removed DiffDelete
@@ -301,15 +299,15 @@ endif
 
 if hlexists('DiagnosticInfo')
   highlight DiagnosticDeprecated cterm=strikethrough gui=strikethrough guisp=Red
-  highlight DiagnosticOk    {{Foreground .Green}}
+  highlight DiagnosticOk    {{Foreground .StrongGreen}}
   highlight DiagnosticHint  {{Foreground .Gradation3}}
-  highlight DiagnosticInfo  {{Foreground .Blue}}
-  highlight DiagnosticWarn  {{Foreground .Red}}
+  highlight DiagnosticInfo  {{Foreground .StrongBlue}}
+  highlight DiagnosticWarn  {{Foreground .StrongRed}}
   highlight DiagnosticError {{Foreground .Red}}
-  highlight DiagnosticUnderlineOk {{Emphasis "underline"}} guisp=#{{.Green.ToHex}}
+  highlight DiagnosticUnderlineOk {{Emphasis "underline"}} guisp=#{{.StrongGreen.ToHex}}
   highlight DiagnosticUnderlineHint {{Emphasis "underline"}} guisp=#{{.Gradation3.ToHex}}
-  highlight DiagnosticUnderlineInfo {{Emphasis "underline"}} guisp=#{{.Blue.ToHex}}
-  highlight DiagnosticUnderlineWarn {{Emphasis "underline"}} guisp=#{{.Red.ToHex}}
+  highlight DiagnosticUnderlineInfo {{Emphasis "underline"}} guisp=#{{.StrongBlue.ToHex}}
+  highlight DiagnosticUnderlineWarn {{Emphasis "underline"}} guisp=#{{.StrongRed.ToHex}}
   highlight DiagnosticUnderlineError {{Emphasis "underline"}} guisp=#{{.Red.ToHex}}
 endif
 

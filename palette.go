@@ -17,12 +17,27 @@ type ColorPalette struct {
 	BrightMagenta Color
 	BrightCyan    Color
 	BrightWhite   Color
-	HardBlack     Color
 	Gradation1    Color
 	Gradation2    Color
 	Gradation3    Color
 	Gradation4    Color
 	Gradation5    Color
+
+	Background Color
+	Foreground Color
+
+	WeakRed       Color
+	WeakGreen     Color
+	WeakYellow    Color
+	WeakBlue      Color
+	WeakMagenta   Color
+	WeakCyan      Color
+	StrongRed     Color
+	StrongGreen   Color
+	StrongYellow  Color
+	StrongBlue    Color
+	StrongMagenta Color
+	StrongCyan    Color
 }
 
 var Palette = ColorPalette{
@@ -90,10 +105,6 @@ var Palette = ColorPalette{
 		RGBA:  FromHex("DEE9ED"), // 淡卯の花
 		Index: 15,
 	},
-	HardBlack: Color{
-		RGBA:  FromHex("3D272C"), // 濃蘇芳
-		Index: 232,
-	},
 	Gradation1: Color{
 		RGBA:  FromHex("E7C9D3"), // 桜鼠
 		Index: 239,
@@ -114,4 +125,22 @@ var Palette = ColorPalette{
 		RGBA:  FromHex("5D3E4C"), // 栗梅
 		Index: 235,
 	},
+}
+
+func init() {
+	Palette.Background = Palette.BrightWhite
+	Palette.Foreground = Palette.Black
+
+	Palette.WeakRed = Palette.BrightRed
+	Palette.WeakGreen = Palette.BrightGreen
+	Palette.WeakYellow = Palette.BrightYellow
+	Palette.WeakBlue = Palette.BrightBlue
+	Palette.WeakMagenta = Palette.BrightMagenta
+	Palette.WeakCyan = Palette.BrightCyan
+	Palette.StrongRed = Palette.Red
+	Palette.StrongGreen = Palette.Green
+	Palette.StrongYellow = Palette.Yellow
+	Palette.StrongBlue = Palette.Blue
+	Palette.StrongMagenta = Palette.Magenta
+	Palette.StrongCyan = Palette.Cyan
 }

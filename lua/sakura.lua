@@ -17,7 +17,6 @@ local M = {}
 ---@field brightmagenta string RGB(#rrggbb) color
 ---@field brightcyan string RGB(#rrggbb) color
 ---@field brightwhite string RGB(#rrggbb) color
----@field hardblack string RGB(#rrggbb) color
 ---@field gradation1 string RGB(#rrggbb) color
 ---@field gradation2 string RGB(#rrggbb) color
 ---@field gradation3 string RGB(#rrggbb) color
@@ -42,7 +41,6 @@ M.colors = {
   brightmagenta = "#d29eb5",
   brightcyan = "#7da2b3",
   brightwhite = "#dee9ed",
-  hardblack = "#3d272c",
   gradation1 = "#e7c9d3",
   gradation2 = "#b995a4",
   gradation3 = "#977584",
@@ -71,7 +69,6 @@ M.colors = {
 ---@field brightmagenta SakuraHighlightColor
 ---@field brightcyan SakuraHighlightColor
 ---@field brightwhite SakuraHighlightColor
----@field hardblack SakuraHighlightColor
 ---@field gradation1 SakuraHighlightColor
 ---@field gradation2 SakuraHighlightColor
 ---@field gradation3 SakuraHighlightColor
@@ -96,7 +93,6 @@ M.palette = {
   brightmagenta = { gui = "#d29eb5", cterm = 13 },
   brightcyan = { gui = "#7da2b3", cterm = 14 },
   brightwhite = { gui = "#dee9ed", cterm = 15 },
-  hardblack = { gui = "#3d272c", cterm = 232 },
   gradation1 = { gui = "#e7c9d3", cterm = 239 },
   gradation2 = { gui = "#b995a4", cterm = 238 },
   gradation3 = { gui = "#977584", cterm = 237 },

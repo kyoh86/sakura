@@ -9,7 +9,7 @@ if exists("syntax_on")
 endif
 
 let g:colors_name='sakura'
-set background=bright
+set background=light
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -32,7 +32,6 @@ let g:sakura_colors['brightblue'] =    '#51b0ff'
 let g:sakura_colors['brightmagenta'] = '#d29eb5'
 let g:sakura_colors['brightcyan'] =    '#7da2b3'
 let g:sakura_colors['brightwhite'] =   '#dee9ed'
-let g:sakura_colors['hardblack'] =     '#3d272c'
 let g:sakura_colors['gradation1'] =    '#e7c9d3'
 let g:sakura_colors['gradation2'] =    '#b995a4'
 let g:sakura_colors['gradation3'] =    '#977584'
@@ -56,7 +55,6 @@ let g:sakura_palette['brightblue'] =    [g:sakura_colors.brightblue,    12]
 let g:sakura_palette['brightmagenta'] = [g:sakura_colors.brightmagenta, 13]
 let g:sakura_palette['brightcyan'] =    [g:sakura_colors.brightcyan,    14]
 let g:sakura_palette['brightwhite'] =   [g:sakura_colors.brightwhite,   15]
-let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    232]
 let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   239]
 let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   238]
 let g:sakura_palette['gradation3'] =   [g:sakura_colors.gradation3,   237]
@@ -65,7 +63,7 @@ let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   235]
 
 " Sakura Hi Groups:
 " memoize common hi groups
-highlight SakuraWhite guifg=#3a2731 ctermfg=0
+highlight SakuraWhite guifg=#e7c9d3 ctermfg=7
 highlight SakuraRed guifg=#a03a3a ctermfg=1
 highlight SakuraGreen guifg=#3c7f01 ctermfg=2
 highlight SakuraYellow guifg=#c07b02 ctermfg=3
@@ -106,7 +104,7 @@ highlight NormalFloat guifg=#3a2731 ctermfg=0 guibg=#e7c9d3 ctermbg=239
 highlight! CursorLine NONE
 highlight CursorLine guibg=#e7c9d3 ctermbg=239
 " Screen column that the cursor is
-highlight CursorColumn guibg=#977584 ctermbg=237
+highlight CursorColumn guibg=#b995a4 ctermbg=238
 
 " Tab pages line filler
 highlight TabLineFill guifg=#3c7f01 ctermfg=2 guibg=#dee9ed ctermbg=15
@@ -119,77 +117,77 @@ highlight! link TabLine TabLineFill
 highlight MatchParen guifg=#c07b02 ctermfg=3 guibg=#cc4d4d ctermbg=9 gui=bold cterm=bold
 
 " Highlighted screen columns
-highlight ColorColumn guibg=#5d3e4c ctermbg=8
+highlight ColorColumn guibg=#b995a4 ctermbg=238
 
 " Concealed element: \lambda → λ
 highlight Conceal guifg=#196a9e ctermfg=4
 
-highlight! link Delimiter SakuraBlack
+highlight! Delimiter guifg=#3a2731 ctermfg=0
 
-highlight! link NonText SakuraBrightBlack
-highlight! link SpecialKey SakuraBrightBlack
-highlight! link Whitespace SakuraBrightBlack
+highlight! NonText guifg=#b995a4 ctermfg=238
+highlight! SpecialKey guifg=#b995a4 ctermfg=238
+highlight! Whitespace guifg=#b995a4 ctermfg=238
 
-highlight Visual guifg=#3a2731 ctermfg=0 guibg=#c07b02 ctermbg=3
+highlight Visual guifg=#dee9ed ctermfg=15 guibg=#c07b02 ctermbg=3
 highlight! link VisualNOS Visual
 
-highlight Search guifg=#3a2731 ctermfg=0 guibg=#51b0ff ctermbg=12
+highlight Search guifg=#dee9ed ctermfg=15 guibg=#51b0ff ctermbg=12
 highlight IncSearch None
-highlight IncSearch guifg=#3a2731 ctermfg=0 guibg=#d29eb5 ctermbg=13
+highlight IncSearch guifg=#dee9ed ctermfg=15 guibg=#d29eb5 ctermbg=13
 highlight CurSearch None
-highlight CurSearch guifg=#3a2731 ctermfg=0 guibg=#89b97c ctermbg=10
+highlight CurSearch guifg=#dee9ed ctermfg=15 guibg=#89b97c ctermbg=10
 highlight Substitute None
-highlight Substitute guifg=#3a2731 ctermfg=0 guibg=#d29eb5 ctermbg=13
+highlight Substitute guifg=#dee9ed ctermfg=15 guibg=#d29eb5 ctermbg=13
 
 highlight Underlined guifg=#196a9e ctermfg=4 gui=underline cterm=underline
 
-highlight StatusLine guifg=#e7c9d3 ctermfg=7 guibg=#7a5867 ctermbg=236 gui=bold cterm=bold
-highlight StatusLineNC guifg=#e7c9d3 ctermfg=7 guibg=#3a2731 ctermbg=0 gui=underline cterm=underline
+highlight StatusLine guifg=#3a2731 ctermfg=0 guibg=#b995a4 ctermbg=238 gui=bold cterm=bold
+highlight StatusLineNC guifg=#3a2731 ctermfg=0 guibg=#e7c9d3 ctermbg=239 gui=underline cterm=underline
 
 " The column separating vertically split windows
-highlight VertSplit guifg=#b995a4 ctermfg=238 gui=bold cterm=bold
+highlight VertSplit guifg=#7a5867 ctermfg=236 gui=bold cterm=bold
 
 " Current match in wildmenu completion
 highlight WildMenu guifg=#196a9e ctermfg=4 guibg=#dee9ed ctermbg=15 gui=bold cterm=bold
 
 " Directory names, special names in listing
-highlight! link Directory SakuraGreenBold
+highlight! Directory guifg=#3c7f01 ctermfg=2 gui=bold cterm=bold
 
 " Titles for output from :set all, :autocmd, etc.
-highlight! link Title SakuraYellowBold
+highlight! Title guifg=#c07b02 ctermfg=3 gui=bold cterm=bold
 
 " Error messages on the command line
-highlight ErrorMsg guifg=#dee9ed ctermfg=15 guibg=#a03a3a ctermbg=1
+highlight ErrorMsg guifg=#3a2731 ctermfg=0 guibg=#a03a3a ctermbg=1
 " More prompt: -- More --
-highlight! link MoreMsg SakuraYellowBold
+highlight! MoreMsg guifg=#c07b02 ctermfg=3 gui=bold cterm=bold
 " Current mode message: -- INSERT --
-highlight! link ModeMsg SakuraYellowBold
+highlight! ModeMsg guifg=#c07b02 ctermfg=3 gui=bold cterm=bold
 " 'Press enter' prompt and yes/no questions
-highlight! link Question SakuraBrightRedBold
+highlight! Question guifg=#cc4d4d ctermfg=9 gui=bold cterm=bold
 " Warning messages
-highlight! link WarningMsg SakuraRedBold
+highlight! WarningMsg guifg=#a03a3a ctermfg=1 gui=bold cterm=bold
 " Gutter:
 " Line number for :number and :# commands
-highlight LineNr guifg=#3a2731 ctermfg=0 guibg=#dee9ed ctermbg=15
+highlight LineNr guifg=#7a5867 ctermfg=236 guibg=#e7c9d3 ctermbg=239
 
 " Line number of CursorLine
 highlight CursorLineNr guifg=#dee9ed ctermfg=15 guibg=#196a9e ctermbg=4 gui=bold cterm=bold
 
 if hlexists('LineNrAbove')
-  highlight LineNrAbove guifg=#a45779 ctermfg=5 guibg=#dee9ed ctermbg=15
-  highlight LineNrBelow guifg=#3c7f01 ctermfg=2 guibg=#dee9ed ctermbg=15
+  highlight LineNrAbove guifg=#a45779 ctermfg=5 guibg=#e7c9d3 ctermbg=239
+  highlight LineNrBelow guifg=#3c7f01 ctermfg=2 guibg=#e7c9d3 ctermbg=239
 endif
 
 " Column where signs are displayed
-highlight SignColumn guibg=#dee9ed ctermbg=15
+highlight SignColumn guibg=#e7c9d3 ctermbg=239
 
 " Line used for closed folds
-highlight Folded guifg=#5d3e4c ctermfg=8 guibg=#dee9ed ctermbg=15 gui=italic cterm=italic
+highlight Folded guifg=#7a5867 ctermfg=236 gui=italic cterm=italic
 " Column where folds are displayed
-highlight FoldColumn guifg=#5d3e4c ctermfg=8 guibg=#dee9ed ctermbg=15
+highlight FoldColumn guifg=#7a5867 ctermfg=236 guibg=#dee9ed ctermbg=15
 " Cursor:
 " Character under cursor
-highlight Cursor guifg=#3a2731 ctermfg=0 guibg=#c07b02 ctermbg=3
+highlight Cursor guifg=#dee9ed ctermfg=15 guibg=#c07b02 ctermbg=3
 " Character under cursor in a focused terminal
 highlight link TermCursor Cursor
 " Cursor in an unfocused terminal
@@ -203,63 +201,63 @@ highlight! link lCursor Cursor
 " Syntax Highlighting:
 highlight! Special guifg=#c07b02 ctermfg=3 gui=bold cterm=bold
 
-highlight Comment guifg=#b995a4 ctermfg=238 gui=italic cterm=italic
-highlight Todo guifg=#3a2731 ctermfg=0 guibg=#dee9ed ctermbg=15 gui=bold,italic cterm=bold,italic
-highlight Error guifg=#a03a3a ctermfg=1 guibg=#dee9ed ctermbg=15 gui=bold,inverse cterm=bold,inverse
+highlight Comment guifg=#977584 ctermfg=237 gui=italic cterm=italic
+highlight Todo guifg=#3a2731 ctermfg=0 gui=bold,italic cterm=bold,italic
+highlight Error guifg=#a03a3a ctermfg=1 gui=bold,inverse cterm=bold,inverse
 
 " String constant: "this is a string"
 highlight String guifg=#3c7f01 ctermfg=2
 
 " Generic statement
-highlight! link Statement SakuraYellow
+highlight! Statement guifg=#c07b02 ctermfg=3
 " if, then, else, endif, swicth, etc.
-highlight! link Conditional SakuraYellow
+highlight! Conditional guifg=#c07b02 ctermfg=3
 " for, do, while, etc.
-highlight! link Repeat SakuraYellow
+highlight! Repeat guifg=#c07b02 ctermfg=3
 " case, default, etc.
-highlight! link Label SakuraYellow
+highlight! Label guifg=#c07b02 ctermfg=3
 " try, catch, throw
-highlight! link Exception SakuraRed
+highlight! Exception guifg=#a03a3a ctermfg=1
 " sizeof, "+", "*", etc.
 highlight! link Operator None
 " Any other keyword
-highlight! link Keyword SakuraRed
+highlight! Keyword guifg=#a03a3a ctermfg=1
 
 " Variable name
 highlight! Identifier guifg=#196a9e ctermfg=4
 " Function name
-highlight! link Function SakuraBlue
+highlight! Function guifg=#196a9e ctermfg=4
 
 " Generic preprocessor
-highlight! link PreProc SakuraMagenta
+highlight! PreProc guifg=#a45779 ctermfg=5
 " Preprocessor #include
-highlight! link Include SakuraMagenta
+highlight! Include guifg=#a45779 ctermfg=5
 " Preprocessor #define
-highlight! link Define SakuraMagenta
+highlight! Define guifg=#a45779 ctermfg=5
 " Same as Define
-highlight! link Macro SakuraMagenta
+highlight! Macro guifg=#a45779 ctermfg=5
 " Preprocessor #if, #else, #endif, etc.
-highlight! link PreCondit SakuraMagenta
+highlight! PreCondit guifg=#a45779 ctermfg=5
 
 " Generic constant
-highlight! link Constant SakuraMagenta
+highlight! Constant guifg=#a45779 ctermfg=5
 " Character constant: 'c', '/n'
-highlight! link Character SakuraMagenta
+highlight! Character guifg=#a45779 ctermfg=5
 " Boolean constant: TRUE, false
-highlight! link Boolean SakuraMagenta
+highlight! Boolean guifg=#a45779 ctermfg=5
 " Number constant: 234, 0xff
-highlight! link Number SakuraMagenta
+highlight! Number guifg=#a45779 ctermfg=5
 " Floating point constant: 2.3e10
-highlight! link Float SakuraMagenta
+highlight! Float guifg=#a45779 ctermfg=5
 
 " Generic type
-highlight! link Type SakuraCyan
+highlight! Type guifg=#53838a ctermfg=6
 " static, register, volatile, etc
-highlight! link StorageClass SakuraCyan
+highlight! StorageClass guifg=#53838a ctermfg=6
 " struct, union, enum, etc.
-highlight! link Structure SakuraRed
+highlight! Structure guifg=#a03a3a ctermfg=1
 " typedef
-highlight! link Typedef SakuraRed
+highlight! Typedef guifg=#a03a3a ctermfg=1
 " Completion Menu:
 " Popup menu: normal item
 highlight Pmenu guibg=#e7c9d3 ctermbg=239
