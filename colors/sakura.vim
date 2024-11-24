@@ -9,7 +9,6 @@ if exists("syntax_on")
 endif
 
 let g:colors_name='sakura'
-set background=light
 
 if !has('gui_running') && &t_Co != 256
   finish

@@ -21,11 +21,11 @@ the essence of the cherry tree is not solely found in its fleeting blossoms but 
 | Color                                         | Role       | Hex       | Description                                                       |
 |-----------------------------------------------|------------|-----------|-------------------------------------------------------------------|
 | ![](https://placehold.co/15x15/3D272C/3D272C) | Hard black | `#3D272C` | A very deep reddish-purple tone, suitable for strong shadows.     |
-| ![](https://placehold.co/15x15/5D3E4C/5D3E4C) | Gradation1 | `#5D3E4C` | A dark reddish-gray with warm undertones, perfect for accents.    |
-| ![](https://placehold.co/15x15/7A5867/7A5867) | Gradation2 | `#7A5867` | A rich and deep reddish-gray, balancing calmness and depth.       |
+| ![](https://placehold.co/15x15/E7C9D3/E7C9D3) | Gradation1 | `#E7C9D3` | A pale reddish-gray, evoking the softness of cherry blossoms.     |
+| ![](https://placehold.co/15x15/B995A4/B995A4) | Gradation2 | `#B995A4` | A brighter reddish-gray with a hint of purple, graceful and soft. |
 | ![](https://placehold.co/15x15/977584/977584) | Gradation3 | `#977584` | A muted reddish-gray with elegance and sophistication.            |
-| ![](https://placehold.co/15x15/B995A4/B995A4) | Gradation4 | `#B995A4` | A brighter reddish-gray with a hint of purple, graceful and soft. |
-| ![](https://placehold.co/15x15/E7C9D3/E7C9D3) | Gradation5 | `#E7C9D3` | A pale reddish-gray, evoking the softness of cherry blossoms.     |
+| ![](https://placehold.co/15x15/7A5867/7A5867) | Gradation4 | `#7A5867` | A rich and deep reddish-gray, balancing calmness and depth.       |
+| ![](https://placehold.co/15x15/5D3E4C/5D3E4C) | Gradation5 | `#5D3E4C` | A dark reddish-gray with warm undertones, perfect for accents.    |
 
 ## Color Scheme (6 Themes)
 
