@@ -1,0 +1,346 @@
+" 'sakura.vim' -- Vim color scheme.
+" Maintainer:   kyoh86 (me@kyoh86.dev)
+" Description:  Colorscheme that focus ease of use and clearly defined contrasting colors with a slightly earthy tone.
+" Original Source: https://github.com/kyoh86/sakura
+
+highlight clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name='sakura'
+
+if !has('gui_running') && &t_Co != 256
+  finish
+endif
+
+let g:sakura_colors = {}
+let g:sakura_colors['black'] =        '#{{.Black.HexRGB}}'
+let g:sakura_colors['red'] =          '#{{.Red.HexRGB}}'
+let g:sakura_colors['green'] =        '#{{.Green.HexRGB}}'
+let g:sakura_colors['yellow'] =       '#{{.Yellow.HexRGB}}'
+let g:sakura_colors['blue'] =         '#{{.Blue.HexRGB}}'
+let g:sakura_colors['magenta'] =      '#{{.Magenta.HexRGB}}'
+let g:sakura_colors['cyan'] =         '#{{.Cyan.HexRGB}}'
+let g:sakura_colors['white'] =        '#{{.White.HexRGB}}'
+let g:sakura_colors['lightblack'] =   '#{{.LightBlack.HexRGB}}'
+let g:sakura_colors['lightred'] =     '#{{.LightRed.HexRGB}}'
+let g:sakura_colors['lightgreen'] =   '#{{.LightGreen.HexRGB}}'
+let g:sakura_colors['lightyellow'] =  '#{{.LightYellow.HexRGB}}'
+let g:sakura_colors['lightblue'] =    '#{{.LightBlue.HexRGB}}'
+let g:sakura_colors['lightmagenta'] = '#{{.LightMagenta.HexRGB}}'
+let g:sakura_colors['lightcyan'] =    '#{{.LightCyan.HexRGB}}'
+let g:sakura_colors['lightwhite'] =   '#{{.LightWhite.HexRGB}}'
+let g:sakura_colors['hardblack'] =    '#{{.HardBlack.HexRGB}}'
+let g:sakura_colors['grayscale1'] =   '#{{.GrayScale1.HexRGB}}'
+let g:sakura_colors['grayscale2'] =   '#{{.GrayScale2.HexRGB}}'
+let g:sakura_colors['grayscale3'] =   '#{{.GrayScale3.HexRGB}}'
+let g:sakura_colors['grayscale4'] =   '#{{.GrayScale4.HexRGB}}'
+let g:sakura_colors['grayscale5'] =   '#{{.GrayScale5.HexRGB}}'
+
+let g:sakura_palette = {}
+let g:sakura_palette['black'] =        [g:sakura_colors.black,        {{.Black.Index}}]
+let g:sakura_palette['red'] =          [g:sakura_colors.red,          {{.Red.Index}}]
+let g:sakura_palette['green'] =        [g:sakura_colors.green,        {{.Green.Index}}]
+let g:sakura_palette['yellow'] =       [g:sakura_colors.yellow,       {{.Yellow.Index}}]
+let g:sakura_palette['blue'] =         [g:sakura_colors.blue,         {{.Blue.Index}}]
+let g:sakura_palette['magenta'] =      [g:sakura_colors.magenta,      {{.Magenta.Index}}]
+let g:sakura_palette['cyan'] =         [g:sakura_colors.cyan,         {{.Cyan.Index}}]
+let g:sakura_palette['white'] =        [g:sakura_colors.white,        {{.White.Index}}]
+let g:sakura_palette['lightblack'] =   [g:sakura_colors.lightblack,   {{.LightBlack.Index}}]
+let g:sakura_palette['lightred'] =     [g:sakura_colors.lightred,     {{.LightRed.Index}}]
+let g:sakura_palette['lightgreen'] =   [g:sakura_colors.lightgreen,   {{.LightGreen.Index}}]
+let g:sakura_palette['lightyellow'] =  [g:sakura_colors.lightyellow,  {{.LightYellow.Index}}]
+let g:sakura_palette['lightblue'] =    [g:sakura_colors.lightblue,    {{.LightBlue.Index}}]
+let g:sakura_palette['lightmagenta'] = [g:sakura_colors.lightmagenta, {{.LightMagenta.Index}}]
+let g:sakura_palette['lightcyan'] =    [g:sakura_colors.lightcyan,    {{.LightCyan.Index}}]
+let g:sakura_palette['lightwhite'] =   [g:sakura_colors.lightwhite,   {{.LightWhite.Index}}]
+let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    {{.HardBlack.Index}}]
+let g:sakura_palette['grayscale1'] =   [g:sakura_colors.grayscale1,   {{.GrayScale1.Index}}]
+let g:sakura_palette['grayscale2'] =   [g:sakura_colors.grayscale2,   {{.GrayScale2.Index}}]
+let g:sakura_palette['grayscale3'] =   [g:sakura_colors.grayscale3,   {{.GrayScale3.Index}}]
+let g:sakura_palette['grayscale4'] =   [g:sakura_colors.grayscale4,   {{.GrayScale4.Index}}]
+let g:sakura_palette['grayscale5'] =   [g:sakura_colors.grayscale5,   {{.GrayScale5.Index}}]
+
+" Set a highlight group.
+" `params` contains some options like below.
+"   - fg     color
+"   - bg     color
+"   - empha  list of bold|italic|inverseg|underline|undercurlg
+"   - guisp  a color for various underlines
+"
+" Which color for fg or bg you can get it from g:sakura_palette e.g.:
+"   call SakuraHighlight(Pmenu, {'fg': g:sakura_palette.red})
+function! SakuraHighlight(group, params)
+  " params: fg, bg, empha, guisp
+  let l:histr = [ 'highlight', a:group ]
+
+  let l:fg = get(a:params, 'fg', get(a:params, 'foreground', []))
+  if len(l:fg) >= 2
+    call extend(l:histr, ['guifg=' . l:fg[0], 'ctermfg=' . l:fg[1]])
+  endif
+
+  let l:bg = get(a:params, 'bg', get(a:params, 'background', []))
+  if len(l:bg) >= 2
+    call extend(l:histr, ['guibg=' . l:bg[0], 'ctermbg=' . l:bg[1]])
+  endif
+
+  let l:empha = get(a:params, 'empha', [])
+  let l:empha = filter(l:empha, {_, v -> v !=# ''})
+
+  if len(l:empha) > 0
+    let l:em = join(l:empha, ',')
+    call extend(l:histr, ['gui=' . l:em, 'cterm=' . l:em])
+  endif
+
+  let l:guisp = get(a:params, 'guisp', [])
+  if len(l:guisp) > 0
+    call add(l:histr, 'guisp=' . l:guisp[0])
+  endif
+
+  execute join(l:histr, ' ')
+endfunction
+
+" Sakura Hi Groups:
+" memoize common hi groups
+highlight SakuraWhite {{Foreground .Black}}
+highlight SakuraRed {{Foreground .Red}}
+highlight SakuraGreen {{Foreground .Green}}
+highlight SakuraYellow {{Foreground .Yellow}}
+highlight SakuraBlue {{Foreground .Blue}}
+highlight SakuraMagenta {{Foreground .Magenta}}
+highlight SakuraCyan {{Foreground .Cyan}}
+highlight SakuraBlack {{Foreground .Black}}
+highlight SakuraRedBold {{Foreground .Red}} {{Emphasis "bold"}}
+highlight SakuraGreenBold {{Foreground .Green}} {{Emphasis "bold"}}
+highlight SakuraYellowBold {{Foreground .Yellow}} {{Emphasis "bold"}}
+highlight SakuraBlueBold {{Foreground .Blue}} {{Emphasis "bold"}}
+highlight SakuraMagentaBold {{Foreground .Magenta}} {{Emphasis "bold"}}
+highlight SakuraCyanBold {{Foreground .Cyan}} {{Emphasis "bold"}}
+
+highlight SakuraBrightRed {{Foreground .LightRed}}
+highlight SakuraBrightGreen {{Foreground .LightGreen}}
+highlight SakuraBrightYellow {{Foreground .LightYellow}}
+highlight SakuraBrightBlue {{Foreground .LightBlue}}
+highlight SakuraBrightMagenta {{Foreground .LightMagenta}}
+highlight SakuraBrightCyan {{Foreground .LightCyan}}
+highlight SakuraBrightBlack {{Foreground .LightBlack}}
+highlight SakuraBrightWhite {{Foreground .LightWhite}}
+
+" special
+highlight SakuraBrightRedBold {{Foreground .LightRed}} {{Emphasis "bold"}}
+highlight SakuraGrayScale1 {{Foreground .GrayScale1}}
+highlight SakuraGrayScale2 {{Foreground .GrayScale2}}
+highlight SakuraGrayScale3 {{Foreground .GrayScale3}}
+highlight SakuraGrayScale4 {{Foreground .GrayScale4}}
+highlight SakuraGrayScale5 {{Foreground .GrayScale5}}
+
+" General UI:
+" Normal text
+highlight Normal {{Foreground .LightWhite}} {{Background .Black}}
+highlight NormalFloat {{Foreground .LightWhite}} {{Background .GrayScale1}}
+
+" Screen line that the cursor is
+highlight! CursorLine NONE
+highlight CursorLine {{Background .GrayScale1}}
+" Screen column that the cursor is
+highlight CursorColumn {{Background .LightBlack}}
+
+" Tab pages line filler
+highlight TabLineFill {{Foreground .Green}} {{Background .Black}}
+" Active tab page label
+highlight TabLineSel {{Foreground .Red}} {{Background .Black}} {{Emphasis "bold"}}
+" Not active tab page label
+highlight! link TabLine TabLineFill
+
+" Match paired bracket under the cursor
+highlight MatchParen {{Foreground .Yellow}} {{Background .LightBlack}} {{Emphasis "bold"}}
+
+" Highlighted screen columns
+highlight ColorColumn {{Background .LightBlack}}
+
+" Concealed element: \lambda → λ
+highlight Conceal {{Foreground .Blue}}
+
+highlight! link NonText SakuraBrightBlack
+highlight! link SpecialKey SakuraBrightBlack
+highlight! link Whitespace SakuraBrightBlack
+
+highlight Visual {{Foreground .Black}} {{Background .Yellow}}
+highlight! link VisualNOS Visual
+
+highlight Search {{Foreground .Black}} {{Background .LightBlue}}
+highlight IncSearch None
+highlight IncSearch {{Foreground .Black}} {{Background .LightMagenta}}
+highlight CurSearch None
+highlight CurSearch {{Foreground .Black}} {{Background .LightGreen}}
+highlight Substitute None
+highlight Substitute {{Foreground .Black}} {{Background .LightMagenta}}
+
+highlight Underlined {{Foreground .Blue}} {{Emphasis "underline"}}
+
+highlight StatusLine {{Foreground .White}} {{Background .GrayScale2}} {{Emphasis "bold"}}
+highlight StatusLineNC {{Foreground .White}} {{Background .Black}} {{Emphasis "underline"}}
+
+" The column separating vertically split windows
+highlight VertSplit {{Foreground .GrayScale4}} {{Emphasis "bold"}}
+
+" Current match in wildmenu completion
+highlight WildMenu {{Foreground .Blue}} {{Background .Black}} {{Emphasis "bold"}}
+
+" Directory names, special names in listing
+highlight! link Directory SakuraGreenBold
+
+" Titles for output from :set all, :autocmd, etc.
+highlight! link Title SakuraYellowBold
+
+" Error messages on the command line
+highlight ErrorMsg {{Foreground .LightWhite}} {{Background .Red}}
+" More prompt: -- More --
+highlight! link MoreMsg SakuraYellowBold
+" Current mode message: -- INSERT --
+highlight! link ModeMsg SakuraYellowBold
+" 'Press enter' prompt and yes/no questions
+highlight! link Question SakuraBrightRedBold
+" Warning messages
+highlight! link WarningMsg SakuraRedBold
+" Gutter:
+" Line number for :number and :# commands
+highlight LineNr {{Foreground .White}} {{Background .HardBlack}}
+
+" Line number of CursorLine
+highlight CursorLineNr {{Foreground .GrayScale1}} {{Background .Blue}} {{Emphasis "bold"}}
+
+if hlexists('LineNrAbove')
+  highlight LineNrAbove {{Foreground .LightMagenta}} {{Background .HardBlack}}
+  highlight LineNrBelow {{Foreground .LightGreen}} {{Background .HardBlack}}
+endif
+
+" Column where signs are displayed
+highlight SignColumn {{Background .HardBlack}}
+
+" Line used for closed folds
+highlight Folded {{Foreground .White}} {{Background .Black}} {{Emphasis "italic"}}
+" Column where folds are displayed
+highlight FoldColumn {{Foreground .White}} {{Background .Black}}
+" Cursor:
+" Character under cursor
+highlight Cursor {{Foreground .Black}} {{Background .LightYellow}}
+" Character under cursor in a focused terminal
+highlight link TermCursor Cursor
+" Cursor in an unfocused terminal
+highlight link TermCursorNC Cursor
+" Visual mode cursor, selection
+highlight link vCursor Cursor
+" Input moder cursor
+highlight! link iCursor Cursor
+" Language mapping cursor
+highlight! link lCursor Cursor
+" Syntax Highlighting:
+highlight! link Special SakuraBrightYellow
+
+highlight Comment {{Foreground .White}} {{Emphasis "italic"}}
+highlight Todo {{Foreground .LightWhite}} {{Background .Black}} {{Emphasis "bold" "italic"}}
+highlight Error {{Foreground .LightRed}} {{Background .Black}} {{Emphasis "bold" "inverse"}}
+
+" String constant: "this is a string"
+highlight String {{Foreground .Green}}
+
+" Generic statement
+highlight! link Statement SakuraYellow
+" if, then, else, endif, swicth, etc.
+highlight! link Conditional SakuraYellow
+" for, do, while, etc.
+highlight! link Repeat SakuraYellow
+" case, default, etc.
+highlight! link Label SakuraYellow
+" try, catch, throw
+highlight! link Exception SakuraRed
+" sizeof, "+", "*", etc.
+highlight! link Operator None
+" Any other keyword
+highlight! link Keyword SakuraRed
+
+" Variable name
+highlight! link Identifier SakuraBrightBlue
+" Function name
+highlight! link Function SakuraBlue
+
+" Generic preprocessor
+highlight! link PreProc SakuraMagenta
+" Preprocessor #include
+highlight! link Include SakuraMagenta
+" Preprocessor #define
+highlight! link Define SakuraMagenta
+" Same as Define
+highlight! link Macro SakuraMagenta
+" Preprocessor #if, #else, #endif, etc.
+highlight! link PreCondit SakuraMagenta
+
+" Generic constant
+highlight! link Constant SakuraBrightMagenta
+" Character constant: 'c', '/n'
+highlight! link Character SakuraBrightMagenta
+" Boolean constant: TRUE, false
+highlight! link Boolean SakuraBrightMagenta
+" Number constant: 234, 0xff
+highlight! link Number SakuraBrightMagenta
+" Floating point constant: 2.3e10
+highlight! link Float SakuraBrightMagenta
+
+" Generic type
+highlight! link Type SakuraCyan
+" static, register, volatile, etc
+highlight! link StorageClass SakuraCyan
+" struct, union, enum, etc.
+highlight! link Structure SakuraBrightRed
+" typedef
+highlight! link Typedef SakuraBrightRed
+" Completion Menu:
+" Popup menu: normal item
+highlight Pmenu {{Background .GrayScale1}}
+" Popup menu: selected item
+highlight PmenuSel {{Background .GrayScale2}} {{Emphasis "bold"}}
+" Popup menu: scrollbar
+highlight PmenuSbar {{Background .GrayScale2}}
+" Popup menu: scrollbar thumb
+highlight PmenuThumb {{Background .GrayScale2}}
+" Diffs:
+highlight DiffDelete {{Foreground .LightRed}} {{Background .Black}}
+highlight DiffAdd {{Foreground .LightGreen}} {{Background .Black}}
+highlight DiffChange {{Foreground .Cyan}} {{Background .Black}}
+highlight DiffText {{Foreground .LightYellow}} {{Background .Black}}
+" Spelling:
+if has("spell")
+  " Not capitalised word, or compile warnings
+  highlight SpellCap {{Emphasis "undercurl"}} guisp=#{{.Blue.HexRGB}}
+  " Not recognized word
+  highlight SpellBad {{Emphasis "undercurl"}} guisp=#{{.Blue.HexRGB}}
+  " Wrong spelling for selected region
+  highlight SpellLocal {{Emphasis "undercurl"}} guisp=#{{.Cyan.HexRGB}}
+  " Rare word
+  highlight SpellRare {{Emphasis "undercurl"}} guisp=#{{.Magenta.HexRGB}}
+endif
+
+if hlexists('FloatBorder')
+  highlight FloatBorder None
+  highlight FloatBorder {{Foreground .GrayScale4}} {{Emphasis "bold"}}
+  highlight FloatShadow None
+  highlight FloatShadow {{Background .GrayScale1}}
+endif
+
+if hlexists('DiagnosticInfo')
+  highlight DiagnosticDeprecated cterm=strikethrough gui=strikethrough guisp=Red
+  highlight DiagnosticOk    {{Foreground .LightGreen}}
+  highlight DiagnosticHint  {{Foreground .GrayScale3}}
+  highlight DiagnosticInfo  {{Foreground .LightBlue}}
+  highlight DiagnosticWarn  {{Foreground .LightRed}}
+  highlight DiagnosticError {{Foreground .Red}}
+  highlight DiagnosticUnderlineOk {{Emphasis "underline"}} guisp=#{{.LightGreen.HexRGB}}
+  highlight DiagnosticUnderlineHint {{Emphasis "underline"}} guisp=#{{.GrayScale3.HexRGB}}
+  highlight DiagnosticUnderlineInfo {{Emphasis "underline"}} guisp=#{{.LightBlue.HexRGB}}
+  highlight DiagnosticUnderlineWarn {{Emphasis "underline"}} guisp=#{{.LightRed.HexRGB}}
+  highlight DiagnosticUnderlineError {{Emphasis "underline"}} guisp=#{{.Red.HexRGB}}
+endif
+
+" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
