@@ -18,11 +18,11 @@ type ColorPalette struct {
 	BrightCyan    Color
 	BrightWhite   Color
 	HardBlack     Color
-	GrayScale1    Color
-	GrayScale2    Color
-	GrayScale3    Color
-	GrayScale4    Color
-	GrayScale5    Color
+	Gradation1    Color
+	Gradation2    Color
+	Gradation3    Color
+	Gradation4    Color
+	Gradation5    Color
 }
 
 var Palette = ColorPalette{
@@ -94,23 +94,23 @@ var Palette = ColorPalette{
 		RGBA:  FromHex("3D272C"), // 濃蘇芳
 		Index: 232,
 	},
-	GrayScale1: Color{
+	Gradation1: Color{
 		RGBA:  FromHex("5D3E4C"), // 栗梅
 		Index: 235,
 	},
-	GrayScale2: Color{
+	Gradation2: Color{
 		RGBA:  FromHex("7A5867"), // 黒鳶
 		Index: 236,
 	},
-	GrayScale3: Color{
+	Gradation3: Color{
 		RGBA:  FromHex("977584"), // 落栗
 		Index: 237,
 	},
-	GrayScale4: Color{
+	Gradation4: Color{
 		RGBA:  FromHex("B995A4"), // 鳩羽紫
 		Index: 238,
 	},
-	GrayScale5: Color{
+	Gradation5: Color{
 		RGBA:  FromHex("E7C9D3"), // 桜鼠
 		Index: 239,
 	},

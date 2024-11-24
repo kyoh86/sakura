@@ -33,11 +33,11 @@ let g:sakura_colors['lightmagenta'] = '#d29eb5'
 let g:sakura_colors['lightcyan'] =    '#7da2b3'
 let g:sakura_colors['lightwhite'] =   '#dee9ed'
 let g:sakura_colors['hardblack'] =    '#3d272c'
-let g:sakura_colors['grayscale1'] =   '#5d3e4c'
-let g:sakura_colors['grayscale2'] =   '#7a5867'
-let g:sakura_colors['grayscale3'] =   '#977584'
-let g:sakura_colors['grayscale4'] =   '#b995a4'
-let g:sakura_colors['grayscale5'] =   '#e7c9d3'
+let g:sakura_colors['gradation1'] =   '#5d3e4c'
+let g:sakura_colors['gradation2'] =   '#7a5867'
+let g:sakura_colors['gradation3'] =   '#977584'
+let g:sakura_colors['gradation4'] =   '#b995a4'
+let g:sakura_colors['gradation5'] =   '#e7c9d3'
 
 let g:sakura_palette = {}
 let g:sakura_palette['black'] =        [g:sakura_colors.black,        0]
@@ -57,11 +57,11 @@ let g:sakura_palette['lightmagenta'] = [g:sakura_colors.lightmagenta, 13]
 let g:sakura_palette['lightcyan'] =    [g:sakura_colors.lightcyan,    14]
 let g:sakura_palette['lightwhite'] =   [g:sakura_colors.lightwhite,   15]
 let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    232]
-let g:sakura_palette['grayscale1'] =   [g:sakura_colors.grayscale1,   235]
-let g:sakura_palette['grayscale2'] =   [g:sakura_colors.grayscale2,   236]
-let g:sakura_palette['grayscale3'] =   [g:sakura_colors.grayscale3,   237]
-let g:sakura_palette['grayscale4'] =   [g:sakura_colors.grayscale4,   238]
-let g:sakura_palette['grayscale5'] =   [g:sakura_colors.grayscale5,   239]
+let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   235]
+let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   236]
+let g:sakura_palette['gradation3'] =   [g:sakura_colors.gradation3,   237]
+let g:sakura_palette['gradation4'] =   [g:sakura_colors.gradation4,   238]
+let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   239]
 
 " Sakura Hi Groups:
 " memoize common hi groups
@@ -91,11 +91,11 @@ highlight SakuraBrightWhite guifg=#dee9ed ctermfg=15
 
 " special
 highlight SakuraBrightRedBold guifg=#cc4d4d ctermfg=9 gui=bold cterm=bold
-highlight SakuraGrayScale1 guifg=#5d3e4c ctermfg=235
-highlight SakuraGrayScale2 guifg=#7a5867 ctermfg=236
-highlight SakuraGrayScale3 guifg=#977584 ctermfg=237
-highlight SakuraGrayScale4 guifg=#b995a4 ctermfg=238
-highlight SakuraGrayScale5 guifg=#e7c9d3 ctermfg=239
+highlight SakuraGradation1 guifg=#5d3e4c ctermfg=235
+highlight SakuraGradation2 guifg=#7a5867 ctermfg=236
+highlight SakuraGradation3 guifg=#977584 ctermfg=237
+highlight SakuraGradation4 guifg=#b995a4 ctermfg=238
+highlight SakuraGradation5 guifg=#e7c9d3 ctermfg=239
 
 " General UI:
 " Normal text

@@ -33,11 +33,11 @@ let g:sakura_colors['lightmagenta'] = '#{{.BrightMagenta.ToHex}}'
 let g:sakura_colors['lightcyan'] =    '#{{.BrightCyan.ToHex}}'
 let g:sakura_colors['lightwhite'] =   '#{{.BrightWhite.ToHex}}'
 let g:sakura_colors['hardblack'] =    '#{{.HardBlack.ToHex}}'
-let g:sakura_colors['grayscale1'] =   '#{{.GrayScale1.ToHex}}'
-let g:sakura_colors['grayscale2'] =   '#{{.GrayScale2.ToHex}}'
-let g:sakura_colors['grayscale3'] =   '#{{.GrayScale3.ToHex}}'
-let g:sakura_colors['grayscale4'] =   '#{{.GrayScale4.ToHex}}'
-let g:sakura_colors['grayscale5'] =   '#{{.GrayScale5.ToHex}}'
+let g:sakura_colors['gradation1'] =   '#{{.Gradation1.ToHex}}'
+let g:sakura_colors['gradation2'] =   '#{{.Gradation2.ToHex}}'
+let g:sakura_colors['gradation3'] =   '#{{.Gradation3.ToHex}}'
+let g:sakura_colors['gradation4'] =   '#{{.Gradation4.ToHex}}'
+let g:sakura_colors['gradation5'] =   '#{{.Gradation5.ToHex}}'
 
 let g:sakura_palette = {}
 let g:sakura_palette['black'] =        [g:sakura_colors.black,        {{.Black.Index}}]
@@ -57,11 +57,11 @@ let g:sakura_palette['lightmagenta'] = [g:sakura_colors.lightmagenta, {{.BrightM
 let g:sakura_palette['lightcyan'] =    [g:sakura_colors.lightcyan,    {{.BrightCyan.Index}}]
 let g:sakura_palette['lightwhite'] =   [g:sakura_colors.lightwhite,   {{.BrightWhite.Index}}]
 let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    {{.HardBlack.Index}}]
-let g:sakura_palette['grayscale1'] =   [g:sakura_colors.grayscale1,   {{.GrayScale1.Index}}]
-let g:sakura_palette['grayscale2'] =   [g:sakura_colors.grayscale2,   {{.GrayScale2.Index}}]
-let g:sakura_palette['grayscale3'] =   [g:sakura_colors.grayscale3,   {{.GrayScale3.Index}}]
-let g:sakura_palette['grayscale4'] =   [g:sakura_colors.grayscale4,   {{.GrayScale4.Index}}]
-let g:sakura_palette['grayscale5'] =   [g:sakura_colors.grayscale5,   {{.GrayScale5.Index}}]
+let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   {{.Gradation1.Index}}]
+let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   {{.Gradation2.Index}}]
+let g:sakura_palette['gradation3'] =   [g:sakura_colors.gradation3,   {{.Gradation3.Index}}]
+let g:sakura_palette['gradation4'] =   [g:sakura_colors.gradation4,   {{.Gradation4.Index}}]
+let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   {{.Gradation5.Index}}]
 
 " Sakura Hi Groups:
 " memoize common hi groups
@@ -91,22 +91,22 @@ highlight SakuraBrightWhite {{Foreground .BrightWhite}}
 
 " special
 highlight SakuraBrightRedBold {{Foreground .BrightRed}} {{Emphasis "bold"}}
-highlight SakuraGrayScale1 {{Foreground .GrayScale1}}
-highlight SakuraGrayScale2 {{Foreground .GrayScale2}}
-highlight SakuraGrayScale3 {{Foreground .GrayScale3}}
-highlight SakuraGrayScale4 {{Foreground .GrayScale4}}
-highlight SakuraGrayScale5 {{Foreground .GrayScale5}}
+highlight SakuraGradation1 {{Foreground .Gradation1}}
+highlight SakuraGradation2 {{Foreground .Gradation2}}
+highlight SakuraGradation3 {{Foreground .Gradation3}}
+highlight SakuraGradation4 {{Foreground .Gradation4}}
+highlight SakuraGradation5 {{Foreground .Gradation5}}
 
 " General UI:
 " Normal text
 highlight Normal {{Foreground .Black}} {{Background .BrightWhite}}
-highlight NormalFloat {{Foreground .Black}} {{Background .GrayScale5}}
+highlight NormalFloat {{Foreground .Black}} {{Background .Gradation5}}
 
 " Screen line that the cursor is
 highlight! CursorLine NONE
-highlight CursorLine {{Background .GrayScale5}}
+highlight CursorLine {{Background .Gradation5}}
 " Screen column that the cursor is
-highlight CursorColumn {{Background .GrayScale3}}
+highlight CursorColumn {{Background .Gradation3}}
 
 " Tab pages line filler
 highlight TabLineFill {{Foreground .Green}} {{Background .BrightWhite}}
@@ -143,11 +143,11 @@ highlight Substitute {{Foreground .Black}} {{Background .BrightMagenta}}
 
 highlight Underlined {{Foreground .Blue}} {{Emphasis "underline"}}
 
-highlight StatusLine {{Foreground .White}} {{Background .GrayScale2}} {{Emphasis "bold"}}
+highlight StatusLine {{Foreground .White}} {{Background .Gradation2}} {{Emphasis "bold"}}
 highlight StatusLineNC {{Foreground .White}} {{Background .Black}} {{Emphasis "underline"}}
 
 " The column separating vertically split windows
-highlight VertSplit {{Foreground .GrayScale4}} {{Emphasis "bold"}}
+highlight VertSplit {{Foreground .Gradation4}} {{Emphasis "bold"}}
 
 " Current match in wildmenu completion
 highlight WildMenu {{Foreground .Blue}} {{Background .BrightWhite}} {{Emphasis "bold"}}
@@ -203,7 +203,7 @@ highlight! link lCursor Cursor
 " Syntax Highlighting:
 highlight! Special {{Foreground .Yellow}} {{Emphasis "bold"}}
 
-highlight Comment {{Foreground .GrayScale4}} {{Emphasis "italic"}}
+highlight Comment {{Foreground .Gradation4}} {{Emphasis "italic"}}
 highlight Todo {{Foreground .Black}} {{Background .BrightWhite}} {{Emphasis "bold" "italic"}}
 highlight Error {{Foreground .Red}} {{Background .BrightWhite}} {{Emphasis "bold" "inverse"}}
 
@@ -262,13 +262,13 @@ highlight! link Structure SakuraRed
 highlight! link Typedef SakuraRed
 " Completion Menu:
 " Popup menu: normal item
-highlight Pmenu {{Background .GrayScale5}}
+highlight Pmenu {{Background .Gradation5}}
 " Popup menu: selected item
-highlight PmenuSel {{Background .GrayScale4}} {{Emphasis "bold"}}
+highlight PmenuSel {{Background .Gradation4}} {{Emphasis "bold"}}
 " Popup menu: scrollbar
-highlight PmenuSbar {{Background .GrayScale4}}
+highlight PmenuSbar {{Background .Gradation4}}
 " Popup menu: scrollbar thumb
-highlight PmenuThumb {{Background .GrayScale4}}
+highlight PmenuThumb {{Background .Gradation4}}
 " Quickfix
 highlight QuickFixLine {{Foreground .Cyan}} {{Emphasis "bold"}}
 " Diffs:
@@ -294,20 +294,20 @@ endif
 
 if hlexists('FloatBorder')
   highlight FloatBorder None
-  highlight FloatBorder {{Foreground .GrayScale3}} {{Background .GrayScale5}} {{Emphasis "bold"}}
+  highlight FloatBorder {{Foreground .Gradation3}} {{Background .Gradation5}} {{Emphasis "bold"}}
   highlight FloatShadow None
-  highlight FloatShadow {{Background .GrayScale1}}
+  highlight FloatShadow {{Background .Gradation1}}
 endif
 
 if hlexists('DiagnosticInfo')
   highlight DiagnosticDeprecated cterm=strikethrough gui=strikethrough guisp=Red
   highlight DiagnosticOk    {{Foreground .Green}}
-  highlight DiagnosticHint  {{Foreground .GrayScale3}}
+  highlight DiagnosticHint  {{Foreground .Gradation3}}
   highlight DiagnosticInfo  {{Foreground .Blue}}
   highlight DiagnosticWarn  {{Foreground .Red}}
   highlight DiagnosticError {{Foreground .Red}}
   highlight DiagnosticUnderlineOk {{Emphasis "underline"}} guisp=#{{.Green.ToHex}}
-  highlight DiagnosticUnderlineHint {{Emphasis "underline"}} guisp=#{{.GrayScale3.ToHex}}
+  highlight DiagnosticUnderlineHint {{Emphasis "underline"}} guisp=#{{.Gradation3.ToHex}}
   highlight DiagnosticUnderlineInfo {{Emphasis "underline"}} guisp=#{{.Blue.ToHex}}
   highlight DiagnosticUnderlineWarn {{Emphasis "underline"}} guisp=#{{.Red.ToHex}}
   highlight DiagnosticUnderlineError {{Emphasis "underline"}} guisp=#{{.Red.ToHex}}

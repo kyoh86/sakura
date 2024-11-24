@@ -16,16 +16,16 @@ the essence of the cherry tree is not solely found in its fleeting blossoms but 
 | ![](https://placehold.co/15x15/DEE9ED/DEE9ED) | Background | `#DEE9ED` | A softer and more subdued pale blue-white. |
 | ![](https://placehold.co/15x15/3A2731/3A2731) | Foreground | `#3A2731` | A dark gray-black with reddish undertones. |
 
-## Grayscale
+## Gradation
 
 | Color                                         | Role        | Hex       | Description                                                      |
 |-----------------------------------------------|-------------|-----------|------------------------------------------------------------------|
 | ![](https://placehold.co/15x15/3D272C/3D272C) | Hard black  | `#3D272C` | A very deep reddish-purple tone, suitable for strong shadows.    |
-| ![](https://placehold.co/15x15/5D3E4C/5D3E4C) | Grayscale-1 | `#5D3E4C` | A dark reddish-gray with warm undertones, perfect for accents.   |
-| ![](https://placehold.co/15x15/7A5867/7A5867) | Grayscale-2 | `#7A5867` | A rich and deep reddish-gray, balancing calmness and depth.      |
-| ![](https://placehold.co/15x15/977584/977584) | Grayscale-3 | `#977584` | A muted reddish-gray with elegance and sophistication.           |
-| ![](https://placehold.co/15x15/B995A4/B995A4) | Grayscale-4 | `#B995A4` | A lighter reddish-gray with a hint of purple, graceful and soft. |
-| ![](https://placehold.co/15x15/E7C9D3/E7C9D3) | Grayscale-5 | `#E7C9D3` | A pale reddish-gray, evoking the softness of cherry blossoms.    |
+| ![](https://placehold.co/15x15/5D3E4C/5D3E4C) | Gradation-1 | `#5D3E4C` | A dark reddish-gray with warm undertones, perfect for accents.   |
+| ![](https://placehold.co/15x15/7A5867/7A5867) | Gradation-2 | `#7A5867` | A rich and deep reddish-gray, balancing calmness and depth.      |
+| ![](https://placehold.co/15x15/977584/977584) | Gradation-3 | `#977584` | A muted reddish-gray with elegance and sophistication.           |
+| ![](https://placehold.co/15x15/B995A4/B995A4) | Gradation-4 | `#B995A4` | A lighter reddish-gray with a hint of purple, graceful and soft. |
+| ![](https://placehold.co/15x15/E7C9D3/E7C9D3) | Gradation-5 | `#E7C9D3` | A pale reddish-gray, evoking the softness of cherry blossoms.    |
 
 ## Color Scheme (6 Themes)
 

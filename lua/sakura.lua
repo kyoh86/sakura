@@ -18,11 +18,11 @@ local M = {}
 ---@field lightcyan string RGB(#rrggbb) color
 ---@field lightwhite string RGB(#rrggbb) color
 ---@field hardblack string RGB(#rrggbb) color
----@field grayscale1 string RGB(#rrggbb) color
----@field grayscale2 string RGB(#rrggbb) color
----@field grayscale3 string RGB(#rrggbb) color
----@field grayscale4 string RGB(#rrggbb) color
----@field grayscale5 string RGB(#rrggbb) color
+---@field gradation1 string RGB(#rrggbb) color
+---@field gradation2 string RGB(#rrggbb) color
+---@field gradation3 string RGB(#rrggbb) color
+---@field gradation4 string RGB(#rrggbb) color
+---@field gradation5 string RGB(#rrggbb) color
 
 ---@type SakuraHighlightColors
 M.colors = {
@@ -43,11 +43,11 @@ M.colors = {
   lightcyan = "#7da2b3",
   lightwhite = "#dee9ed",
   hardblack = "#3d272c",
-  grayscale1 = "#5d3e4c",
-  grayscale2 = "#7a5867",
-  grayscale3 = "#977584",
-  grayscale4 = "#b995a4",
-  grayscale5 = "#e7c9d3",
+  gradation1 = "#5d3e4c",
+  gradation2 = "#7a5867",
+  gradation3 = "#977584",
+  gradation4 = "#b995a4",
+  gradation5 = "#e7c9d3",
 }
 
 ---@class SakuraHighlightColor
@@ -72,11 +72,11 @@ M.colors = {
 ---@field lightcyan SakuraHighlightColor
 ---@field lightwhite SakuraHighlightColor
 ---@field hardblack SakuraHighlightColor
----@field grayscale1 SakuraHighlightColor
----@field grayscale2 SakuraHighlightColor
----@field grayscale3 SakuraHighlightColor
----@field grayscale4 SakuraHighlightColor
----@field grayscale5 SakuraHighlightColor
+---@field gradation1 SakuraHighlightColor
+---@field gradation2 SakuraHighlightColor
+---@field gradation3 SakuraHighlightColor
+---@field gradation4 SakuraHighlightColor
+---@field gradation5 SakuraHighlightColor
 
 ---@type SakuraHighlightPalette
 M.palette = {
@@ -97,11 +97,11 @@ M.palette = {
   lightcyan = { gui = "#7da2b3", cterm = 14 },
   lightwhite = { gui = "#dee9ed", cterm = 15 },
   hardblack = { gui = "#3d272c", cterm = 232 },
-  grayscale1 = { gui = "#5d3e4c", cterm = 235 },
-  grayscale2 = { gui = "#7a5867", cterm = 236 },
-  grayscale3 = { gui = "#977584", cterm = 237 },
-  grayscale4 = { gui = "#b995a4", cterm = 238 },
-  grayscale5 = { gui = "#e7c9d3", cterm = 239 },
+  gradation1 = { gui = "#5d3e4c", cterm = 235 },
+  gradation2 = { gui = "#7a5867", cterm = 236 },
+  gradation3 = { gui = "#977584", cterm = 237 },
+  gradation4 = { gui = "#b995a4", cterm = 238 },
+  gradation5 = { gui = "#e7c9d3", cterm = 239 },
 }
 
 ---@alias SakuraHighlightEmpha "bold"|"underline"|"undercurl"|"underdouble"|"underdotted"|"underdashed"|"strikethrough"|"reverse"|"inverse"|"italic"|"standout"|"altfont"|"nocombine"|"NONE"
