@@ -22,6 +22,8 @@ local M = {}
 ---@field gradation3 string RGB(#rrggbb) color
 ---@field gradation4 string RGB(#rrggbb) color
 ---@field gradation5 string RGB(#rrggbb) color
+---@field background string RGB(#rrggbb) color
+---@field foreground string RGB(#rrggbb) color
 
 ---@type SakuraHighlightColors
 M.colors = {
@@ -46,6 +48,8 @@ M.colors = {
   gradation3 = "#{{.Gradation3.ToHex}}",
   gradation4 = "#{{.Gradation4.ToHex}}",
   gradation5 = "#{{.Gradation5.ToHex}}",
+  background = "#{{.Background.ToHex}}",
+  foreground = "#{{.Foreground.ToHex}}",
 }
 
 ---@class SakuraHighlightColor
@@ -74,6 +78,8 @@ M.colors = {
 ---@field gradation3 SakuraHighlightColor
 ---@field gradation4 SakuraHighlightColor
 ---@field gradation5 SakuraHighlightColor
+---@field background SakuraHighlightColor
+---@field foreground SakuraHighlightColor
 
 ---@type SakuraHighlightPalette
 M.palette = {
@@ -98,6 +104,8 @@ M.palette = {
   gradation3 = { gui = "#{{.Gradation3.ToHex}}", cterm = {{.Gradation3.Index}} },
   gradation4 = { gui = "#{{.Gradation4.ToHex}}", cterm = {{.Gradation4.Index}} },
   gradation5 = { gui = "#{{.Gradation5.ToHex}}", cterm = {{.Gradation5.Index}} },
+  background = { gui = "#{{.Background.ToHex}}", cterm = {{.Background.Index}} },
+  foreground = { gui = "#{{.Foreground.ToHex}}", cterm = {{.Foreground.Index}} },
 }
 
 ---@alias SakuraHighlightEmpha "bold"|"underline"|"undercurl"|"underdouble"|"underdotted"|"underdashed"|"strikethrough"|"reverse"|"inverse"|"italic"|"standout"|"altfont"|"nocombine"|"NONE"

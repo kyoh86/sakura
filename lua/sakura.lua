@@ -22,6 +22,8 @@ local M = {}
 ---@field gradation3 string RGB(#rrggbb) color
 ---@field gradation4 string RGB(#rrggbb) color
 ---@field gradation5 string RGB(#rrggbb) color
+---@field background string RGB(#rrggbb) color
+---@field foreground string RGB(#rrggbb) color
 
 ---@type SakuraHighlightColors
 M.colors = {
@@ -46,6 +48,8 @@ M.colors = {
   gradation3 = "#977584",
   gradation4 = "#7a5867",
   gradation5 = "#5d3e4c",
+  background = "#dee9ed",
+  foreground = "#3a2731",
 }
 
 ---@class SakuraHighlightColor
@@ -74,6 +78,8 @@ M.colors = {
 ---@field gradation3 SakuraHighlightColor
 ---@field gradation4 SakuraHighlightColor
 ---@field gradation5 SakuraHighlightColor
+---@field background SakuraHighlightColor
+---@field foreground SakuraHighlightColor
 
 ---@type SakuraHighlightPalette
 M.palette = {
@@ -98,6 +104,8 @@ M.palette = {
   gradation3 = { gui = "#977584", cterm = 237 },
   gradation4 = { gui = "#7a5867", cterm = 236 },
   gradation5 = { gui = "#5d3e4c", cterm = 235 },
+  background = { gui = "#dee9ed", cterm = 15 },
+  foreground = { gui = "#3a2731", cterm = 0 },
 }
 
 ---@alias SakuraHighlightEmpha "bold"|"underline"|"undercurl"|"underdouble"|"underdotted"|"underdashed"|"strikethrough"|"reverse"|"inverse"|"italic"|"standout"|"altfont"|"nocombine"|"NONE"
