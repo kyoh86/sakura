@@ -2,6 +2,8 @@
 
 My color scheme for vim and some terminal emulators, "sakura" that means Japanese "Cherry blossom"🍂.
 
+NOTE: this is not stable yet.
+
 ## Concept
 
 When we think of cherry blossoms, vibrant pink often comes to mind.
