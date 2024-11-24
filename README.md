@@ -11,41 +11,38 @@ the essence of the cherry tree is not solely found in its fleeting blossoms but 
 
 ## Background and Foreground
 
-| Name                                                                   | Role       | Hex       | Description                                          |
-|------------------------------------------------------------------------|------------|-----------|------------------------------------------------------|
-| 卯の花 (U no hana) ![](https://placehold.co/15x15/F8FBFE/F8FBFE)       | Background | `#F8FBFE` | A very pale blue-white, reminiscent of a spring sky. |
-| 蘇芳黒 (Suou kuro)       ![](https://placehold.co/15x15/3F2B36/3F2B36) | Foreground | `#3F2B36` | A deep, reddish-black inspired by cherry tree bark.  |
+| Color                                         | Role       | Hex       | Description                                |
+|-----------------------------------------------|------------|-----------|--------------------------------------------|
+| ![](https://placehold.co/15x15/DEE9ED/DEE9ED) | Background | `#DEE9ED` | A softer and more subdued pale blue-white. |
+| ![](https://placehold.co/15x15/3A2731/3A2731) | Foreground | `#3A2731` | A dark gray-black with reddish undertones. |
 
 ## Grayscale
 
-
-| Name                                                                    | Role                       | Hex       | Description                                                         |
-|-------------------------------------------------------------------------|----------------------------|-----------|---------------------------------------------------------------------|
-| 鉄黒 (Tetsu guro)         ![](https://placehold.co/15x15/281A1C/281A1C) | Hard black                 | `#281A1C` | An extremely dark black with subtle reddish undertones.             |
-| 蘇芳黒 (Suou kuro)       ![](https://placehold.co/15x15/3F2B36/3F2B36)  | Black                      | `#3F2B36` | A deep, reddish-black inspired by cherry tree bark.                 |
-| 紅消鼠 (Benikeshi nezumi) ![](https://placehold.co/15x15/5B4D4E/5B4D4E) | Grayscale-1                | `#5B4D4E` | A reddish-gray, ideal for accents.                                  |
-| 鉛茶 (Namari cha)         ![](https://placehold.co/15x15/786D6E/786D6E) | Grayscale-2 / Bright black | `#786D6E` | A muted reddish-gray, suitable for mid-tone shading.                |
-| 鳩羽鼠 (Hatoba nezumi)    ![](https://placehold.co/15x15/8B7D7E/8B7D7E) | Grayscale-3                | `#8B7D7E` | A soft gray with slight purple undertones.                          |
-| 香 (Ko)                   ![](https://placehold.co/15x15/B29F9A/B29F9A) | Grayscale-4 / White        | `#B29F9A` | A warm beige-gray with reddish tones, bridging light and mid-tones. |
-| 鳥の子 (Tori no ko) ![](https://placehold.co/15x15/D8C9BF/D8C9BF)       | Grayscale-5                | `#D8C9BF` | A very light gray-beige, close to the background color.             |
-| 卯の花 (U no hana) ![](https://placehold.co/15x15/F8FBFE/F8FBFE)        | Bright white               | `#F8FBFE` | A very pale blue-white, reminiscent of a spring sky.                |
+| Color                                         | Role        | Hex       | Description                                                      |
+|-----------------------------------------------|-------------|-----------|------------------------------------------------------------------|
+| ![](https://placehold.co/15x15/3D272C/3D272C) | Hard black  | `#3D272C` | A very deep reddish-purple tone, suitable for strong shadows.    |
+| ![](https://placehold.co/15x15/5D3E4C/5D3E4C) | Grayscale-1 | `#5D3E4C` | A dark reddish-gray with warm undertones, perfect for accents.   |
+| ![](https://placehold.co/15x15/7A5867/7A5867) | Grayscale-2 | `#7A5867` | A rich and deep reddish-gray, balancing calmness and depth.      |
+| ![](https://placehold.co/15x15/977584/977584) | Grayscale-3 | `#977584` | A muted reddish-gray with elegance and sophistication.           |
+| ![](https://placehold.co/15x15/B995A4/B995A4) | Grayscale-4 | `#B995A4` | A lighter reddish-gray with a hint of purple, graceful and soft. |
+| ![](https://placehold.co/15x15/E7C9D3/E7C9D3) | Grayscale-5 | `#E7C9D3` | A pale reddish-gray, evoking the softness of cherry blossoms.    |
 
 ## Color Scheme (6 Themes)
 
-| Name                                                                | Color          | Hex       | Description                                                          |
-|---------------------------------------------------------------------|----------------|-----------|----------------------------------------------------------------------|
-| 深緋 (Koki ake)       ![](https://placehold.co/15x15/A22041/A22041) | Red            | `#A22041` | A rich, deep crimson symbolizing the core of cherry blossoms.        |
-| 紅緋 (Beni hi)        ![](https://placehold.co/15x15/E83929/E83929) | Bright red     | `#E83929` | A bright and vivid red for highlights and accents.                   |
-| 常磐 (Tokiwa)   ![](https://placehold.co/15x15/007B43/007B43)       | Green          | `#007B43` | A dark evergreen green, representing spring foliage.                 |
-| 若竹 (Wakatake) ![](https://placehold.co/15x15/68BE8D/68BE8D)       | Bright green   | `#68BE8D` | A soft bamboo green, evoking fresh, budding leaves.                  |
-| 山吹 (Yamabuki) ![](https://placehold.co/15x15/F8B500/F8B500)       | Yellow         | `#F8B500` | A golden yellow inspired by the Yamabuki flower.                     |
-| 中黄 (Chu ki)         ![](https://placehold.co/15x15/FFD900/FFD900) | Bright yellow  | `#FFD900` | A bright, sunny yellow for cheerful accents.                         |
-| 縹 (Hanada)     ![](https://placehold.co/15x15/007BBB/007BBB)       | Blue           | `#007BBB` | A deep sky blue representing clear spring skies.                     |
-| 浅葱 (Asagi)    ![](https://placehold.co/15x15/00A1E9/00A1E9)       | Bright blue    | `#00A1E9` | A bright azure blue for vibrant accents.                             |
-| 梅紫 (Ume murasaki)   ![](https://placehold.co/15x15/AA5E81/AA5E81) | Magenta        | `#AA5E81` | A soft purple-pink reminiscent of plum blossoms.                     |
-| 薄紅梅 (Usu kobai)    ![](https://placehold.co/15x15/D8AABF/D8AABF) | Bright magenta | `#D8AABF` | A pale pink capturing the lightness of cherry blossoms.              |
-| 青磁 (Seiji)    ![](https://placehold.co/15x15/468C98/468C98)       | Cyan           | `#468C98` | A muted greenish-blue reminiscent of calm rivers under cherry trees. |
-| 錆青磁 (Sabi seiji)   ![](https://placehold.co/15x15/86B2C5/86B2C5) | Bright cyan    | `#86B2C5` | A brighter, serene blue-green for fresh accents.                     |
+| Color                                         | Role           | Hex       | Description                                             |
+|-----------------------------------------------|----------------|-----------|---------------------------------------------------------|
+| ![](https://placehold.co/15x15/A03A3A/A03A3A) | Red            | `#A03A3A` | A deep, vibrant red-brown tone.                         |
+| ![](https://placehold.co/15x15/CC4D4D/CC4D4D) | Bright red     | `#CC4D4D` | A bright coral red with elegance.                       |
+| ![](https://placehold.co/15x15/3C7F01/3C7F01) | Green          | `#3C7F01` | A vibrant and deep green.                               |
+| ![](https://placehold.co/15x15/99B98C/99B98C) | Bright green   | `#99B98C` | A soft and subdued light green.                         |
+| ![](https://placehold.co/15x15/C07B02/C07B02) | Yellow         | `#C07B02` | A rich yellow that stands out against the background.   |
+| ![](https://placehold.co/15x15/C88D00/C88D00) | Bright yellow  | `#C88D00` | A vibrant golden yellow.                                |
+| ![](https://placehold.co/15x15/196A9E/196A9E) | Blue           | `#196A9E` | A vivid and deep blue.                                  |
+| ![](https://placehold.co/15x15/51B0FF/51B0FF) | Bright blue    | `#51B0FF` | A bright and soft azure blue.                           |
+| ![](https://placehold.co/15x15/A45779/A45779) | Magenta        | `#A45779` | A reddish-purple with depth and sophistication.         |
+| ![](https://placehold.co/15x15/D29EB5/D29EB5) | Bright magenta | `#D29EB5` | A delicate pink reflecting cherry blossoms.             |
+| ![](https://placehold.co/15x15/53838A/53838A) | Cyan           | `#53838A` | A muted greenish-blue evoking calm rivers and serenity. |
+| ![](https://placehold.co/15x15/7DA2B3/7DA2B3) | Bright cyan    | `#7DA2B3` | A bright blue-green for fresh and vibrant accents.      |
 
 ## install (vim)
 

@@ -1,6 +1,6 @@
 " -----------------------------------------------------------------------------
 " File: sakura.vim
-" Description: Sakura colorscheme for Lightline (itchyny/lightline.vim)
+" Description: Sakura colorscheme for Brightline (itchyny/lightline.vim)
 " Author: kyoh86 <me@kyoh86.dev>
 " -----------------------------------------------------------------------------
 

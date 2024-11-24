@@ -1,145 +1,117 @@
 package main
 
-import (
-	"image/color"
-)
-
-type Name string
-
 type ColorPalette struct {
-	Black        Color
-	Red          Color
-	Green        Color
-	Yellow       Color
-	Blue         Color
-	Magenta      Color
-	Cyan         Color
-	White        Color
-	LightBlack   Color
-	LightRed     Color
-	LightGreen   Color
-	LightYellow  Color
-	LightBlue    Color
-	LightMagenta Color
-	LightCyan    Color
-	LightWhite   Color
-	HardBlack    Color
-	GrayScale1   Color
-	GrayScale2   Color
-	GrayScale3   Color
-	GrayScale4   Color
-	GrayScale5   Color
+	Black         Color
+	Red           Color
+	Green         Color
+	Yellow        Color
+	Blue          Color
+	Magenta       Color
+	Cyan          Color
+	White         Color
+	BrightBlack   Color
+	BrightRed     Color
+	BrightGreen   Color
+	BrightYellow  Color
+	BrightBlue    Color
+	BrightMagenta Color
+	BrightCyan    Color
+	BrightWhite   Color
+	HardBlack     Color
+	GrayScale1    Color
+	GrayScale2    Color
+	GrayScale3    Color
+	GrayScale4    Color
+	GrayScale5    Color
 }
 
 var Palette = ColorPalette{
 	Black: Color{
-		// 蘇芳黒
-		RGBA:  color.RGBA{R: 0x3F, G: 0x2B, B: 0x36},
+		RGBA:  FromHex("3A2731"), // 墨
 		Index: 0,
 	},
 	Red: Color{
-		// 深緋
-		RGBA:  color.RGBA{R: 0xA2, G: 0x20, B: 0x41},
+		RGBA:  FromHex("A03A3A"), // 紅海老茶
 		Index: 1,
 	},
 	Green: Color{
-		// 常磐
-		RGBA:  color.RGBA{R: 0x00, G: 0x7B, B: 0x43},
+		RGBA:  FromHex("3C7F01"), // 苔
 		Index: 2,
 	},
 	Yellow: Color{
-		// 山吹
-		RGBA:  color.RGBA{R: 0xF8, G: 0xB5, B: 0x00},
+		RGBA:  FromHex("C07B02"), // 琥珀
 		Index: 3,
 	},
 	Blue: Color{
-		// 縹
-		RGBA:  color.RGBA{R: 0x00, G: 0x7B, B: 0xBB},
+		RGBA:  FromHex("196A9E"), // 藍鼠
 		Index: 4,
 	},
 	Magenta: Color{
-		// 梅紫
-		RGBA:  color.RGBA{R: 0xAA, G: 0x5E, B: 0x81},
+		RGBA:  FromHex("A45779"), // 蘇芳紫
 		Index: 5,
 	},
 	Cyan: Color{
-		// 青磁
-		RGBA:  color.RGBA{R: 0x46, G: 0x81, B: 0x98},
+		RGBA:  FromHex("53838A"), // 錆青
 		Index: 6,
 	},
 	White: Color{
-		// 香（Grayscale-4）
-		RGBA:  color.RGBA{R: 0xB2, G: 0x9F, B: 0x9A},
+		RGBA:  FromHex("E7C9D3"), // 桜鼠
 		Index: 7,
 	},
-	LightBlack: Color{
-		// 鉛茶（Grayscale-2）
-		RGBA:  color.RGBA{R: 0x78, G: 0x6D, B: 0x6E},
+	BrightBlack: Color{
+		RGBA:  FromHex("5D3E4C"), // 栗梅
 		Index: 8,
 	},
-	LightRed: Color{
-		// 紅緋
-		RGBA:  color.RGBA{R: 0xE8, G: 0x39, B: 0x29},
+	BrightRed: Color{
+		RGBA:  FromHex("CC4D4D"), // 朱華
 		Index: 9,
 	},
-	LightGreen: Color{
-		// 若竹
-		RGBA:  color.RGBA{R: 0x68, G: 0xBE, B: 0x8D},
+	BrightGreen: Color{
+		RGBA:  FromHex("89B97C"), // 柳煤竹
 		Index: 10,
 	},
-	LightYellow: Color{
-		// 中黄
-		RGBA:  color.RGBA{R: 0xFF, G: 0xD9, B: 0x00},
+	BrightYellow: Color{
+		RGBA:  FromHex("C88D00"), // 藤黄
 		Index: 11,
 	},
-	LightBlue: Color{
-		// 浅葱
-		RGBA:  color.RGBA{R: 0x00, G: 0xA1, B: 0xE9},
+	BrightBlue: Color{
+		RGBA:  FromHex("51B0FF"), // 浅縹
 		Index: 12,
 	},
-	LightMagenta: Color{
-		// 薄紅梅
-		RGBA:  color.RGBA{R: 0xD8, G: 0xAA, B: 0xBf},
+	BrightMagenta: Color{
+		RGBA:  FromHex("D29EB5"), // 桃花
 		Index: 13,
 	},
-	LightCyan: Color{
-		// 錆青磁
-		RGBA:  color.RGBA{R: 0x86, G: 0xB2, B: 0xC5},
+	BrightCyan: Color{
+		RGBA:  FromHex("7DA2B3"), // 白群
 		Index: 14,
 	},
-	LightWhite: Color{
-		// 卯の花
-		RGBA:  color.RGBA{R: 0xF8, G: 0xFB, B: 0xFE},
+	BrightWhite: Color{
+		RGBA:  FromHex("DEE9ED"), // 淡卯の花
 		Index: 15,
 	},
 	HardBlack: Color{
-		// 鉄黒
-		RGBA:  color.RGBA{R: 0x28, G: 0x1A, B: 0x1C},
+		RGBA:  FromHex("3D272C"), // 濃蘇芳
 		Index: 232,
 	},
 	GrayScale1: Color{
-		// 紅消鼠
-		RGBA:  color.RGBA{R: 0x5B, G: 0x4D, B: 0x4E},
+		RGBA:  FromHex("5D3E4C"), // 栗梅
 		Index: 235,
 	},
 	GrayScale2: Color{
-		// 鉛茶
-		RGBA:  color.RGBA{R: 0x78, G: 0x6D, B: 0x6E},
+		RGBA:  FromHex("7A5867"), // 黒鳶
 		Index: 236,
 	},
 	GrayScale3: Color{
-		// 鳩羽鼠
-		RGBA:  color.RGBA{R: 0x8B, G: 0x7D, B: 0x7E},
+		RGBA:  FromHex("977584"), // 落栗
 		Index: 237,
 	},
 	GrayScale4: Color{
-		// 香
-		RGBA:  color.RGBA{R: 0xB2, G: 0x9F, B: 0x9A},
+		RGBA:  FromHex("B995A4"), // 鳩羽紫
 		Index: 238,
 	},
 	GrayScale5: Color{
-		// 鳥の子
-		RGBA:  color.RGBA{R: 0xD8, G: 0xC9, B: 0xBF},
+		RGBA:  FromHex("E7C9D3"), // 桜鼠
 		Index: 239,
 	},
 }
