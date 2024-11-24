@@ -9,14 +9,14 @@ local M = {}
 ---@field magenta string RGB(#rrggbb) color
 ---@field cyan string RGB(#rrggbb) color
 ---@field white string RGB(#rrggbb) color
----@field lightblack string RGB(#rrggbb) color
----@field lightred string RGB(#rrggbb) color
----@field lightgreen string RGB(#rrggbb) color
----@field lightyellow string RGB(#rrggbb) color
----@field lightblue string RGB(#rrggbb) color
----@field lightmagenta string RGB(#rrggbb) color
----@field lightcyan string RGB(#rrggbb) color
----@field lightwhite string RGB(#rrggbb) color
+---@field brightblack string RGB(#rrggbb) color
+---@field brightred string RGB(#rrggbb) color
+---@field brightgreen string RGB(#rrggbb) color
+---@field brightyellow string RGB(#rrggbb) color
+---@field brightblue string RGB(#rrggbb) color
+---@field brightmagenta string RGB(#rrggbb) color
+---@field brightcyan string RGB(#rrggbb) color
+---@field brightwhite string RGB(#rrggbb) color
 ---@field hardblack string RGB(#rrggbb) color
 ---@field gradation1 string RGB(#rrggbb) color
 ---@field gradation2 string RGB(#rrggbb) color
@@ -34,20 +34,20 @@ M.colors = {
   magenta = "#a45779",
   cyan = "#53838a",
   white = "#e7c9d3",
-  lightblack = "#5d3e4c",
-  lightred = "#cc4d4d",
-  lightgreen = "#89b97c",
-  lightyellow = "#c88d00",
-  lightblue = "#51b0ff",
-  lightmagenta = "#d29eb5",
-  lightcyan = "#7da2b3",
-  lightwhite = "#dee9ed",
+  brightblack = "#5d3e4c",
+  brightred = "#cc4d4d",
+  brightgreen = "#89b97c",
+  brightyellow = "#c88d00",
+  brightblue = "#51b0ff",
+  brightmagenta = "#d29eb5",
+  brightcyan = "#7da2b3",
+  brightwhite = "#dee9ed",
   hardblack = "#3d272c",
-  gradation1 = "#5d3e4c",
-  gradation2 = "#7a5867",
+  gradation1 = "#e7c9d3",
+  gradation2 = "#b995a4",
   gradation3 = "#977584",
-  gradation4 = "#b995a4",
-  gradation5 = "#e7c9d3",
+  gradation4 = "#7a5867",
+  gradation5 = "#5d3e4c",
 }
 
 ---@class SakuraHighlightColor
@@ -63,14 +63,14 @@ M.colors = {
 ---@field magenta SakuraHighlightColor
 ---@field cyan SakuraHighlightColor
 ---@field white SakuraHighlightColor
----@field lightblack SakuraHighlightColor
----@field lightred SakuraHighlightColor
----@field lightgreen SakuraHighlightColor
----@field lightyellow SakuraHighlightColor
----@field lightblue SakuraHighlightColor
----@field lightmagenta SakuraHighlightColor
----@field lightcyan SakuraHighlightColor
----@field lightwhite SakuraHighlightColor
+---@field brightblack SakuraHighlightColor
+---@field brightred SakuraHighlightColor
+---@field brightgreen SakuraHighlightColor
+---@field brightyellow SakuraHighlightColor
+---@field brightblue SakuraHighlightColor
+---@field brightmagenta SakuraHighlightColor
+---@field brightcyan SakuraHighlightColor
+---@field brightwhite SakuraHighlightColor
 ---@field hardblack SakuraHighlightColor
 ---@field gradation1 SakuraHighlightColor
 ---@field gradation2 SakuraHighlightColor
@@ -88,20 +88,20 @@ M.palette = {
   magenta = { gui = "#a45779", cterm = 5 },
   cyan = { gui = "#53838a", cterm = 6 },
   white = { gui = "#e7c9d3", cterm = 7 },
-  lightblack = { gui = "#5d3e4c", cterm = 8 },
-  lightred = { gui = "#cc4d4d", cterm = 9 },
-  lightgreen = { gui = "#89b97c", cterm = 10 },
-  lightyellow = { gui = "#c88d00", cterm = 11 },
-  lightblue = { gui = "#51b0ff", cterm = 12 },
-  lightmagenta = { gui = "#d29eb5", cterm = 13 },
-  lightcyan = { gui = "#7da2b3", cterm = 14 },
-  lightwhite = { gui = "#dee9ed", cterm = 15 },
+  brightblack = { gui = "#5d3e4c", cterm = 8 },
+  brightred = { gui = "#cc4d4d", cterm = 9 },
+  brightgreen = { gui = "#89b97c", cterm = 10 },
+  brightyellow = { gui = "#c88d00", cterm = 11 },
+  brightblue = { gui = "#51b0ff", cterm = 12 },
+  brightmagenta = { gui = "#d29eb5", cterm = 13 },
+  brightcyan = { gui = "#7da2b3", cterm = 14 },
+  brightwhite = { gui = "#dee9ed", cterm = 15 },
   hardblack = { gui = "#3d272c", cterm = 232 },
-  gradation1 = { gui = "#5d3e4c", cterm = 235 },
-  gradation2 = { gui = "#7a5867", cterm = 236 },
+  gradation1 = { gui = "#e7c9d3", cterm = 239 },
+  gradation2 = { gui = "#b995a4", cterm = 238 },
   gradation3 = { gui = "#977584", cterm = 237 },
-  gradation4 = { gui = "#b995a4", cterm = 238 },
-  gradation5 = { gui = "#e7c9d3", cterm = 239 },
+  gradation4 = { gui = "#7a5867", cterm = 236 },
+  gradation5 = { gui = "#5d3e4c", cterm = 235 },
 }
 
 ---@alias SakuraHighlightEmpha "bold"|"underline"|"undercurl"|"underdouble"|"underdotted"|"underdashed"|"strikethrough"|"reverse"|"inverse"|"italic"|"standout"|"altfont"|"nocombine"|"NONE"

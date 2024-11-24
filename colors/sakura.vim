@@ -9,35 +9,35 @@ if exists("syntax_on")
 endif
 
 let g:colors_name='sakura'
-set background=light
+set background=bright
 
 if !has('gui_running') && &t_Co != 256
   finish
 endif
 
 let g:sakura_colors = {}
-let g:sakura_colors['black'] =        '#3a2731'
-let g:sakura_colors['red'] =          '#a03a3a'
-let g:sakura_colors['green'] =        '#3c7f01'
-let g:sakura_colors['yellow'] =       '#c07b02'
-let g:sakura_colors['blue'] =         '#196a9e'
-let g:sakura_colors['magenta'] =      '#a45779'
-let g:sakura_colors['cyan'] =         '#53838a'
-let g:sakura_colors['white'] =        '#e7c9d3'
-let g:sakura_colors['lightblack'] =   '#5d3e4c'
-let g:sakura_colors['lightred'] =     '#cc4d4d'
-let g:sakura_colors['lightgreen'] =   '#89b97c'
-let g:sakura_colors['lightyellow'] =  '#c88d00'
-let g:sakura_colors['lightblue'] =    '#51b0ff'
-let g:sakura_colors['lightmagenta'] = '#d29eb5'
-let g:sakura_colors['lightcyan'] =    '#7da2b3'
-let g:sakura_colors['lightwhite'] =   '#dee9ed'
-let g:sakura_colors['hardblack'] =    '#3d272c'
-let g:sakura_colors['gradation1'] =   '#5d3e4c'
-let g:sakura_colors['gradation2'] =   '#7a5867'
-let g:sakura_colors['gradation3'] =   '#977584'
-let g:sakura_colors['gradation4'] =   '#b995a4'
-let g:sakura_colors['gradation5'] =   '#e7c9d3'
+let g:sakura_colors['black'] =         '#3a2731'
+let g:sakura_colors['red'] =           '#a03a3a'
+let g:sakura_colors['green'] =         '#3c7f01'
+let g:sakura_colors['yellow'] =        '#c07b02'
+let g:sakura_colors['blue'] =          '#196a9e'
+let g:sakura_colors['magenta'] =       '#a45779'
+let g:sakura_colors['cyan'] =          '#53838a'
+let g:sakura_colors['white'] =         '#e7c9d3'
+let g:sakura_colors['brightblack'] =   '#5d3e4c'
+let g:sakura_colors['brightred'] =     '#cc4d4d'
+let g:sakura_colors['brightgreen'] =   '#89b97c'
+let g:sakura_colors['brightyellow'] =  '#c88d00'
+let g:sakura_colors['brightblue'] =    '#51b0ff'
+let g:sakura_colors['brightmagenta'] = '#d29eb5'
+let g:sakura_colors['brightcyan'] =    '#7da2b3'
+let g:sakura_colors['brightwhite'] =   '#dee9ed'
+let g:sakura_colors['hardblack'] =     '#3d272c'
+let g:sakura_colors['gradation1'] =    '#e7c9d3'
+let g:sakura_colors['gradation2'] =    '#b995a4'
+let g:sakura_colors['gradation3'] =    '#977584'
+let g:sakura_colors['gradation4'] =    '#7a5867'
+let g:sakura_colors['gradation5'] =    '#5d3e4c'
 
 let g:sakura_palette = {}
 let g:sakura_palette['black'] =        [g:sakura_colors.black,        0]
@@ -48,20 +48,20 @@ let g:sakura_palette['blue'] =         [g:sakura_colors.blue,         4]
 let g:sakura_palette['magenta'] =      [g:sakura_colors.magenta,      5]
 let g:sakura_palette['cyan'] =         [g:sakura_colors.cyan,         6]
 let g:sakura_palette['white'] =        [g:sakura_colors.white,        7]
-let g:sakura_palette['lightblack'] =   [g:sakura_colors.lightblack,   8]
-let g:sakura_palette['lightred'] =     [g:sakura_colors.lightred,     9]
-let g:sakura_palette['lightgreen'] =   [g:sakura_colors.lightgreen,   10]
-let g:sakura_palette['lightyellow'] =  [g:sakura_colors.lightyellow,  11]
-let g:sakura_palette['lightblue'] =    [g:sakura_colors.lightblue,    12]
-let g:sakura_palette['lightmagenta'] = [g:sakura_colors.lightmagenta, 13]
-let g:sakura_palette['lightcyan'] =    [g:sakura_colors.lightcyan,    14]
-let g:sakura_palette['lightwhite'] =   [g:sakura_colors.lightwhite,   15]
+let g:sakura_palette['brightblack'] =   [g:sakura_colors.brightblack,   8]
+let g:sakura_palette['brightred'] =     [g:sakura_colors.brightred,     9]
+let g:sakura_palette['brightgreen'] =   [g:sakura_colors.brightgreen,   10]
+let g:sakura_palette['brightyellow'] =  [g:sakura_colors.brightyellow,  11]
+let g:sakura_palette['brightblue'] =    [g:sakura_colors.brightblue,    12]
+let g:sakura_palette['brightmagenta'] = [g:sakura_colors.brightmagenta, 13]
+let g:sakura_palette['brightcyan'] =    [g:sakura_colors.brightcyan,    14]
+let g:sakura_palette['brightwhite'] =   [g:sakura_colors.brightwhite,   15]
 let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    232]
-let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   235]
-let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   236]
+let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   239]
+let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   238]
 let g:sakura_palette['gradation3'] =   [g:sakura_colors.gradation3,   237]
-let g:sakura_palette['gradation4'] =   [g:sakura_colors.gradation4,   238]
-let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   239]
+let g:sakura_palette['gradation4'] =   [g:sakura_colors.gradation4,   236]
+let g:sakura_palette['gradation5'] =   [g:sakura_colors.gradation5,   235]
 
 " Sakura Hi Groups:
 " memoize common hi groups
@@ -91,11 +91,11 @@ highlight SakuraBrightWhite guifg=#dee9ed ctermfg=15
 
 " special
 highlight SakuraBrightRedBold guifg=#cc4d4d ctermfg=9 gui=bold cterm=bold
-highlight SakuraGradation1 guifg=#5d3e4c ctermfg=235
-highlight SakuraGradation2 guifg=#7a5867 ctermfg=236
+highlight SakuraGradation1 guifg=#e7c9d3 ctermfg=239
+highlight SakuraGradation2 guifg=#b995a4 ctermfg=238
 highlight SakuraGradation3 guifg=#977584 ctermfg=237
-highlight SakuraGradation4 guifg=#b995a4 ctermfg=238
-highlight SakuraGradation5 guifg=#e7c9d3 ctermfg=239
+highlight SakuraGradation4 guifg=#7a5867 ctermfg=236
+highlight SakuraGradation5 guifg=#5d3e4c ctermfg=235
 
 " General UI:
 " Normal text
@@ -294,9 +294,9 @@ endif
 
 if hlexists('FloatBorder')
   highlight FloatBorder None
-  highlight FloatBorder guifg=#977584 ctermfg=237 guibg=#e7c9d3 ctermbg=239 gui=bold cterm=bold
+  highlight FloatBorder guifg=#7a5867 ctermfg=236 gui=bold cterm=bold
   highlight FloatShadow None
-  highlight FloatShadow guibg=#5d3e4c ctermbg=235
+  highlight FloatShadow guibg=#e7c9d3 ctermbg=239
 endif
 
 if hlexists('DiagnosticInfo')

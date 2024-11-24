@@ -9,35 +9,35 @@ if exists("syntax_on")
 endif
 
 let g:colors_name='sakura'
-set background=light
+set background=bright
 
 if !has('gui_running') && &t_Co != 256
   finish
 endif
 
 let g:sakura_colors = {}
-let g:sakura_colors['black'] =        '#{{.Black.ToHex}}'
-let g:sakura_colors['red'] =          '#{{.Red.ToHex}}'
-let g:sakura_colors['green'] =        '#{{.Green.ToHex}}'
-let g:sakura_colors['yellow'] =       '#{{.Yellow.ToHex}}'
-let g:sakura_colors['blue'] =         '#{{.Blue.ToHex}}'
-let g:sakura_colors['magenta'] =      '#{{.Magenta.ToHex}}'
-let g:sakura_colors['cyan'] =         '#{{.Cyan.ToHex}}'
-let g:sakura_colors['white'] =        '#{{.White.ToHex}}'
-let g:sakura_colors['lightblack'] =   '#{{.BrightBlack.ToHex}}'
-let g:sakura_colors['lightred'] =     '#{{.BrightRed.ToHex}}'
-let g:sakura_colors['lightgreen'] =   '#{{.BrightGreen.ToHex}}'
-let g:sakura_colors['lightyellow'] =  '#{{.BrightYellow.ToHex}}'
-let g:sakura_colors['lightblue'] =    '#{{.BrightBlue.ToHex}}'
-let g:sakura_colors['lightmagenta'] = '#{{.BrightMagenta.ToHex}}'
-let g:sakura_colors['lightcyan'] =    '#{{.BrightCyan.ToHex}}'
-let g:sakura_colors['lightwhite'] =   '#{{.BrightWhite.ToHex}}'
-let g:sakura_colors['hardblack'] =    '#{{.HardBlack.ToHex}}'
-let g:sakura_colors['gradation1'] =   '#{{.Gradation1.ToHex}}'
-let g:sakura_colors['gradation2'] =   '#{{.Gradation2.ToHex}}'
-let g:sakura_colors['gradation3'] =   '#{{.Gradation3.ToHex}}'
-let g:sakura_colors['gradation4'] =   '#{{.Gradation4.ToHex}}'
-let g:sakura_colors['gradation5'] =   '#{{.Gradation5.ToHex}}'
+let g:sakura_colors['black'] =         '#{{.Black.ToHex}}'
+let g:sakura_colors['red'] =           '#{{.Red.ToHex}}'
+let g:sakura_colors['green'] =         '#{{.Green.ToHex}}'
+let g:sakura_colors['yellow'] =        '#{{.Yellow.ToHex}}'
+let g:sakura_colors['blue'] =          '#{{.Blue.ToHex}}'
+let g:sakura_colors['magenta'] =       '#{{.Magenta.ToHex}}'
+let g:sakura_colors['cyan'] =          '#{{.Cyan.ToHex}}'
+let g:sakura_colors['white'] =         '#{{.White.ToHex}}'
+let g:sakura_colors['brightblack'] =   '#{{.BrightBlack.ToHex}}'
+let g:sakura_colors['brightred'] =     '#{{.BrightRed.ToHex}}'
+let g:sakura_colors['brightgreen'] =   '#{{.BrightGreen.ToHex}}'
+let g:sakura_colors['brightyellow'] =  '#{{.BrightYellow.ToHex}}'
+let g:sakura_colors['brightblue'] =    '#{{.BrightBlue.ToHex}}'
+let g:sakura_colors['brightmagenta'] = '#{{.BrightMagenta.ToHex}}'
+let g:sakura_colors['brightcyan'] =    '#{{.BrightCyan.ToHex}}'
+let g:sakura_colors['brightwhite'] =   '#{{.BrightWhite.ToHex}}'
+let g:sakura_colors['hardblack'] =     '#{{.HardBlack.ToHex}}'
+let g:sakura_colors['gradation1'] =    '#{{.Gradation1.ToHex}}'
+let g:sakura_colors['gradation2'] =    '#{{.Gradation2.ToHex}}'
+let g:sakura_colors['gradation3'] =    '#{{.Gradation3.ToHex}}'
+let g:sakura_colors['gradation4'] =    '#{{.Gradation4.ToHex}}'
+let g:sakura_colors['gradation5'] =    '#{{.Gradation5.ToHex}}'
 
 let g:sakura_palette = {}
 let g:sakura_palette['black'] =        [g:sakura_colors.black,        {{.Black.Index}}]
@@ -48,14 +48,14 @@ let g:sakura_palette['blue'] =         [g:sakura_colors.blue,         {{.Blue.In
 let g:sakura_palette['magenta'] =      [g:sakura_colors.magenta,      {{.Magenta.Index}}]
 let g:sakura_palette['cyan'] =         [g:sakura_colors.cyan,         {{.Cyan.Index}}]
 let g:sakura_palette['white'] =        [g:sakura_colors.white,        {{.White.Index}}]
-let g:sakura_palette['lightblack'] =   [g:sakura_colors.lightblack,   {{.BrightBlack.Index}}]
-let g:sakura_palette['lightred'] =     [g:sakura_colors.lightred,     {{.BrightRed.Index}}]
-let g:sakura_palette['lightgreen'] =   [g:sakura_colors.lightgreen,   {{.BrightGreen.Index}}]
-let g:sakura_palette['lightyellow'] =  [g:sakura_colors.lightyellow,  {{.BrightYellow.Index}}]
-let g:sakura_palette['lightblue'] =    [g:sakura_colors.lightblue,    {{.BrightBlue.Index}}]
-let g:sakura_palette['lightmagenta'] = [g:sakura_colors.lightmagenta, {{.BrightMagenta.Index}}]
-let g:sakura_palette['lightcyan'] =    [g:sakura_colors.lightcyan,    {{.BrightCyan.Index}}]
-let g:sakura_palette['lightwhite'] =   [g:sakura_colors.lightwhite,   {{.BrightWhite.Index}}]
+let g:sakura_palette['brightblack'] =   [g:sakura_colors.brightblack,   {{.BrightBlack.Index}}]
+let g:sakura_palette['brightred'] =     [g:sakura_colors.brightred,     {{.BrightRed.Index}}]
+let g:sakura_palette['brightgreen'] =   [g:sakura_colors.brightgreen,   {{.BrightGreen.Index}}]
+let g:sakura_palette['brightyellow'] =  [g:sakura_colors.brightyellow,  {{.BrightYellow.Index}}]
+let g:sakura_palette['brightblue'] =    [g:sakura_colors.brightblue,    {{.BrightBlue.Index}}]
+let g:sakura_palette['brightmagenta'] = [g:sakura_colors.brightmagenta, {{.BrightMagenta.Index}}]
+let g:sakura_palette['brightcyan'] =    [g:sakura_colors.brightcyan,    {{.BrightCyan.Index}}]
+let g:sakura_palette['brightwhite'] =   [g:sakura_colors.brightwhite,   {{.BrightWhite.Index}}]
 let g:sakura_palette['hardblack'] =    [g:sakura_colors.hardblack,    {{.HardBlack.Index}}]
 let g:sakura_palette['gradation1'] =   [g:sakura_colors.gradation1,   {{.Gradation1.Index}}]
 let g:sakura_palette['gradation2'] =   [g:sakura_colors.gradation2,   {{.Gradation2.Index}}]
@@ -100,11 +100,11 @@ highlight SakuraGradation5 {{Foreground .Gradation5}}
 " General UI:
 " Normal text
 highlight Normal {{Foreground .Black}} {{Background .BrightWhite}}
-highlight NormalFloat {{Foreground .Black}} {{Background .Gradation5}}
+highlight NormalFloat {{Foreground .Black}} {{Background .Gradation1}}
 
 " Screen line that the cursor is
 highlight! CursorLine NONE
-highlight CursorLine {{Background .Gradation5}}
+highlight CursorLine {{Background .Gradation1}}
 " Screen column that the cursor is
 highlight CursorColumn {{Background .Gradation3}}
 
@@ -143,11 +143,11 @@ highlight Substitute {{Foreground .Black}} {{Background .BrightMagenta}}
 
 highlight Underlined {{Foreground .Blue}} {{Emphasis "underline"}}
 
-highlight StatusLine {{Foreground .White}} {{Background .Gradation2}} {{Emphasis "bold"}}
+highlight StatusLine {{Foreground .White}} {{Background .Gradation4}} {{Emphasis "bold"}}
 highlight StatusLineNC {{Foreground .White}} {{Background .Black}} {{Emphasis "underline"}}
 
 " The column separating vertically split windows
-highlight VertSplit {{Foreground .Gradation4}} {{Emphasis "bold"}}
+highlight VertSplit {{Foreground .Gradation2}} {{Emphasis "bold"}}
 
 " Current match in wildmenu completion
 highlight WildMenu {{Foreground .Blue}} {{Background .BrightWhite}} {{Emphasis "bold"}}
@@ -203,7 +203,7 @@ highlight! link lCursor Cursor
 " Syntax Highlighting:
 highlight! Special {{Foreground .Yellow}} {{Emphasis "bold"}}
 
-highlight Comment {{Foreground .Gradation4}} {{Emphasis "italic"}}
+highlight Comment {{Foreground .Gradation2}} {{Emphasis "italic"}}
 highlight Todo {{Foreground .Black}} {{Background .BrightWhite}} {{Emphasis "bold" "italic"}}
 highlight Error {{Foreground .Red}} {{Background .BrightWhite}} {{Emphasis "bold" "inverse"}}
 
@@ -262,13 +262,13 @@ highlight! link Structure SakuraRed
 highlight! link Typedef SakuraRed
 " Completion Menu:
 " Popup menu: normal item
-highlight Pmenu {{Background .Gradation5}}
+highlight Pmenu {{Background .Gradation1}}
 " Popup menu: selected item
-highlight PmenuSel {{Background .Gradation4}} {{Emphasis "bold"}}
+highlight PmenuSel {{Background .Gradation2}} {{Emphasis "bold"}}
 " Popup menu: scrollbar
-highlight PmenuSbar {{Background .Gradation4}}
+highlight PmenuSbar {{Background .Gradation2}}
 " Popup menu: scrollbar thumb
-highlight PmenuThumb {{Background .Gradation4}}
+highlight PmenuThumb {{Background .Gradation2}}
 " Quickfix
 highlight QuickFixLine {{Foreground .Cyan}} {{Emphasis "bold"}}
 " Diffs:
@@ -294,7 +294,7 @@ endif
 
 if hlexists('FloatBorder')
   highlight FloatBorder None
-  highlight FloatBorder {{Foreground .Gradation3}} {{Background .Gradation5}} {{Emphasis "bold"}}
+  highlight FloatBorder {{Foreground .Gradation4}} {{Emphasis "bold"}}
   highlight FloatShadow None
   highlight FloatShadow {{Background .Gradation1}}
 endif

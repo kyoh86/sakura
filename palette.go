@@ -95,23 +95,23 @@ var Palette = ColorPalette{
 		Index: 232,
 	},
 	Gradation1: Color{
-		RGBA:  FromHex("5D3E4C"), // 栗梅
-		Index: 235,
+		RGBA:  FromHex("E7C9D3"), // 桜鼠
+		Index: 239,
 	},
 	Gradation2: Color{
-		RGBA:  FromHex("7A5867"), // 黒鳶
-		Index: 236,
+		RGBA:  FromHex("B995A4"), // 鳩羽紫
+		Index: 238,
 	},
 	Gradation3: Color{
 		RGBA:  FromHex("977584"), // 落栗
 		Index: 237,
 	},
 	Gradation4: Color{
-		RGBA:  FromHex("B995A4"), // 鳩羽紫
-		Index: 238,
+		RGBA:  FromHex("7A5867"), // 黒鳶
+		Index: 236,
 	},
 	Gradation5: Color{
-		RGBA:  FromHex("E7C9D3"), // 桜鼠
-		Index: 239,
+		RGBA:  FromHex("5D3E4C"), // 栗梅
+		Index: 235,
 	},
 }
